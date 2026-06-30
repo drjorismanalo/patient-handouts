@@ -159,11 +159,11 @@ body {
   width: max-content;
 }
 .cat-tab {
-  padding: 7px 16px;
+  padding: 7px 14px;
   border-radius: 20px;
   border: 1.5px solid var(--border);
   background: white;
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'DM Sans', sans-serif;
   color: var(--ink-mid);
   cursor: pointer;
@@ -677,11 +677,14 @@ body {
   <div class="cat-scroll">
     <div class="cat-tabs" id="catTabs">
       <button class="cat-tab active" onclick="filterCat(this,'all')">All</button>
-      <button class="cat-tab" onclick="filterCat(this,'growth')">Growth &amp; Nutrition</button>
-      <button class="cat-tab" onclick="filterCat(this,'vaccines')">Vaccines</button>
-      <button class="cat-tab" onclick="filterCat(this,'skin')">Skin &amp; Allergies</button>
-      <button class="cat-tab" onclick="filterCat(this,'digestion')">Digestion</button>
-      <button class="cat-tab" onclick="filterCat(this,'general')">General Health</button>
+      <button class="cat-tab" onclick="filterCat(this,'preventive')">🛡️ Preventive</button>
+      <button class="cat-tab" onclick="filterCat(this,'growth')">🌱 Growth &amp; Nutrition</button>
+      <button class="cat-tab" onclick="filterCat(this,'development')">🧠 Development</button>
+      <button class="cat-tab" onclick="filterCat(this,'vaccines')">💉 Vaccines</button>
+      <button class="cat-tab" onclick="filterCat(this,'sleep')">😴 Sleep</button>
+      <button class="cat-tab" onclick="filterCat(this,'allergy')">🤧 Allergy</button>
+      <button class="cat-tab" onclick="filterCat(this,'digestion')">🚽 Digestion</button>
+      <button class="cat-tab" onclick="filterCat(this,'general')">❤️ General Health</button>
     </div>
   </div>
 
@@ -725,11 +728,11 @@ body {
     </div>
 
     <!-- CARD: Eczema — LIVE -->
-    <div class="handout-card" data-cat="skin" data-keywords="eczema atopic dermatitis skin rash allergy itchy scratching moisturizer alerhiya balat kati">
+    <div class="handout-card" data-cat="allergy" data-keywords="eczema atopic dermatitis skin rash allergy itchy scratching moisturizer alerhiya balat kati">
       <div class="card-accent gold"></div>
       <div class="card-body">
         <span class="card-emoji">🧴</span>
-        <div class="card-category gold-cat">Skin &amp; Allergies</div>
+        <div class="card-category gold-cat">Allergy &amp; Immunology</div>
         <div class="card-title">Managing Eczema (Atopic Dermatitis)</div>
         <div class="card-desc">Daily skincare routine, moisturizers, trigger avoidance, how to use prescribed creams safely, and when to come back for a check-up.</div>
       </div>
@@ -832,8 +835,44 @@ body {
       </div>
     </div>
 
+    <!-- CARD: Youth Violence Prevention — LIVE -->
+    <div class="handout-card" data-cat="preventive" data-keywords="violence school shooting stabbing teenager mental health warning signs bullying safety karahasan paaralan kabataan">
+      <div class="card-accent orange"></div>
+      <div class="card-body">
+        <span class="card-emoji">🛡️</span>
+        <div class="card-category orange-cat">Preventive Pediatrics</div>
+        <div class="card-title">Protecting Our Children from Violence</div>
+        <div class="card-desc">Warning signs in children and teens, how to talk about school violence, and what parents can do every day to protect and guide their child.</div>
+      </div>
+      <div class="card-footer">
+        <div class="lang-btns">
+          <button class="lang-btn" style="border-color:var(--orange);color:var(--orange)" onclick="openHandout('violence','en',event)">English</button>
+          <button class="lang-btn" style="border-color:var(--orange);color:var(--orange)" onclick="openHandout('violence','tl',event)">Filipino</button>
+        </div>
+        <span class="card-arrow" style="color:var(--orange)">›</span>
+      </div>
+    </div>
+
     <!-- CARD: Well Baby Dev — LIVE -->
-    <div class="handout-card" data-cat="general" data-keywords="development milestones baby infant well child developmental 0-12 months gross motor fine motor language social milestone paglaki pag-unlad sanggol">
+    <div class="handout-card" data-cat="development" data-keywords="development milestones baby infant well child developmental 0-12 months gross motor fine motor language social milestone paglaki pag-unlad sanggol">
+
+    <!-- CARD: Deworming — LIVE -->
+    <div class="handout-card" data-cat="preventive" data-keywords="deworming worms bulate albendazole mebendazole intestinal parasites purga STH helminths pagpupurga">
+      <div class="card-accent"></div>
+      <div class="card-body">
+        <span class="card-emoji">🪱</span>
+        <div class="card-category">Preventive Pediatrics</div>
+        <div class="card-title">Deworming Your Child</div>
+        <div class="card-desc">Why deworming matters, who needs it, when to give it, what to expect, and the DOH National Deworming Program schedule.</div>
+      </div>
+      <div class="card-footer">
+        <div class="lang-btns">
+          <button class="lang-btn" onclick="openHandout('deworm','en',event)">English</button>
+          <button class="lang-btn" onclick="openHandout('deworm','tl',event)">Filipino</button>
+        </div>
+        <span class="card-arrow">›</span>
+      </div>
+    </div>
       <div class="card-accent"></div>
       <div class="card-body">
         <span class="card-emoji">👶</span>
@@ -851,11 +890,11 @@ body {
     </div>
 
     <!-- CARD: Well Child Dev — LIVE -->
-    <div class="handout-card" data-cat="general" data-keywords="development milestones toddler school age child well child developmental 1-12 years gross motor fine motor language social cognitive milestone paglaki pag-unlad bata">
-      <div class="card-accent"></div>
+    <div class="handout-card" data-cat="development" data-keywords="development milestones toddler school age child well child developmental 1-12 years gross motor fine motor language social cognitive milestone paglaki pag-unlad bata">
+      <div class="card-accent" style="background:linear-gradient(90deg,#2A6099,#4A80B9)"></div>
       <div class="card-body">
         <span class="card-emoji">🧒</span>
-        <div class="card-category">General Health</div>
+        <div class="card-category" style="color:#2A6099">Development</div>
         <div class="card-title">Child Development: 1 to 12 Years</div>
         <div class="card-desc">Developmental milestones from toddler to school age — what to expect, red flags to watch for, and everyday activities that support healthy development.</div>
       </div>
@@ -5411,6 +5450,880 @@ HANDOUTS.devchild = {
     <div class="ho-quote" style="color:#2A6099">"Hindi kailangan ng mga bata ang perpektong mga magulang. Kailangan nila ng mga naroroon. Sumipot, manatiling mausisa kung sino sila nagiging, at susunod ang iba."</div>
     <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
     <div class="ho-disclaimer">Ang mga milestone ay batay sa CDC, AAP, at WHO developmental guidelines. Ang handout na ito ay para sa educational purposes lamang. Kung mayroon kayong alalahanin tungkol sa pag-unlad ng inyong anak, mangyaring mag-schedule ng konsultasyon — ang maagang evaluation ay palaging tamang desisyon.</div>
+  </div>
+</div>`
+  }
+};
+
+// ── DEWORMING HANDOUT ─────────────────────────────────────────────────────
+HANDOUTS.deworm = {
+  title: {
+    en: "Deworming Your Child",
+    tl: "Pagpupurga ng Inyong Anak"
+  },
+  content: {
+    en: `
+<div class="ho">
+  <div class="ho-doc-header">
+    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
+    <div class="ho-title-sub">Pediatrician</div>
+    <div class="ho-sched-grid">
+      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Sun 11am–4pm · Tue 2pm–5pm<br>📞 0908 970 0299</div></div>
+      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Mon &amp; Thu 8–11am · Tue &amp; Sat 9am–12pm<br>📞 0976 436 5142</div></div>
+    </div>
+    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
+  </div>
+
+  <div class="ho-hero" style="background:#EEF7F2;border-color:#C8DDD0">
+    <div class="ho-hero-title">🪱 Deworming Your Child</div>
+    <div class="ho-hero-sub">Why it matters, who needs it, and what to expect — based on DOH Administrative Order 2015-0054</div>
+    <div class="ho-intro" style="border-color:#2E7D52">
+      Intestinal worms (soil-transmitted helminths or STH) are a major public health concern in the Philippines — affecting millions of children and silently causing poor nutrition, slow growth, anemia, and difficulty in school. <strong>The good news: deworming is simple, safe, and free.</strong> One tablet every 6 months is all it takes to protect your child.
+    </div>
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="ho-section">
+    <div class="ho-section-title">🔍 Why Worms Are a Problem</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Intestinal worms don't always cause obvious symptoms — many infected children look healthy. But inside, worms are quietly causing harm:</p>
+    <div class="nutrient-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr))">
+      ${[
+        ["🥗","Malnutrition","Worms compete with your child for nutrients from food — causing poor weight gain and stunted growth"],
+        ["🩸","Anemia","Hookworms feed on blood — causing iron-deficiency anemia, pallor, and easy fatigue"],
+        ["🧠","Poor school performance","Worm burden is linked to reduced concentration, lower test scores, and school absenteeism"],
+        ["😴","Chronic fatigue","Children with heavy worm infections have less energy for play, learning, and physical activity"],
+        ["🤢","Belly complaints","Some children have recurrent abdominal pain, bloating, or diarrhea — though many have no symptoms at all"],
+      ].map(([e,n,d]) => `
+      <div class="nutrient-card">
+        <div class="n-icon">${e}</div>
+        <div class="n-name">${n}</div>
+        <div class="n-sources">${d}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+
+  <!-- HOW WORMS SPREAD -->
+  <div class="ho-section">
+    <div class="ho-section-title">🌱 How Children Get Worms</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:12px;line-height:1.65">Soil-transmitted helminths spread through contaminated soil, water, and surfaces — not person to person directly:</p>
+    <div class="growth-age-block">
+      <div class="growth-age-hdr">Common routes of transmission</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.8">
+        🤲 Walking barefoot on contaminated soil — hookworm larvae can penetrate skin<br>
+        🥬 Eating unwashed vegetables or fruits grown in contaminated soil<br>
+        💧 Drinking or using unclean water<br>
+        🖐️ Hand-to-mouth contact after touching contaminated soil or surfaces<br>
+        🚽 Poor sanitation and open defecation in the community<br><br>
+        <div style="background:#EEF7F2;border-radius:8px;padding:10px;font-size:12.5px;color:#4A5752">
+          <strong style="color:#2E7D52">The three main worms in the Philippines:</strong><br>
+          • <em>Ascaris lumbricoides</em> (roundworm) — most common<br>
+          • <em>Trichuris trichiura</em> (whipworm)<br>
+          • Hookworms (<em>Necator americanus, Ancylostoma duodenale</em>)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOH SCHEDULE -->
+  <div class="ho-section">
+    <div class="ho-section-title">📋 The DOH Deworming Schedule (AO 2015-0054)</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">The DOH recommends deworming <strong>twice a year (every 6 months)</strong> for all children aged 1–12 years. The National Deworming Month is observed every <strong>January and July.</strong></p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr">Who should be dewormed</div>
+      <div style="background:white">
+        ${[
+          ["👶 1–4 years old (Pre-school age children)", "Community-based deworming through barangay health centers and daycare centers — January and July"],
+          ["🧒 5–12 years old (School-age children)", "School-based deworming in public schools — January and July; also available at health centers for those not enrolled"],
+          ["👩 Pregnant women (2nd and 3rd trimester)", "Safe to deworm after the first trimester — ask your OB or midwife"],
+          ["👩‍🌾 Other at-risk groups", "Women of childbearing age, food handlers, farmers, and indigenous populations — per DOH guidelines"],
+        ].map(([g,s],i,arr) => `
+        <div style="padding:11px 14px;${i<arr.length-1?'border-bottom:1px solid #C8DDD0':''}">
+          <div style="font-size:13.5px;font-weight:600;color:#2E7D52;margin-bottom:3px">${g}</div>
+          <div style="font-size:12.5px;color:#4A5752;line-height:1.5">${s}</div>
+        </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      ⚠ <strong>Children under 1 year old are NOT given deworming medicine</strong> under the DOH mass deworming program. The minimum age is 12 months (1 year old).
+    </div>
+  </div>
+
+  <!-- THE MEDICINE -->
+  <div class="ho-section">
+    <div class="ho-section-title">💊 The Deworming Medicine</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:12px;line-height:1.65">Two medicines are used in the Philippine DOH deworming program — both are safe, effective, and given as a single dose:</p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#2E7D52">Albendazole 400 mg — single tablet</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        <strong>Age:</strong> 1 year old and above<br>
+        <strong>Dose:</strong> One 400 mg tablet, given once — chewed or swallowed<br>
+        <strong>For children 1–2 years old:</strong> The tablet is crushed and mixed with a small amount of food or water<br>
+        <strong>Covers:</strong> Roundworms, whipworms, hookworms<br>
+        <strong>Available:</strong> Free at barangay health centers during National Deworming Month; also available at pharmacies
+      </div>
+    </div>
+
+    <div class="growth-age-block" style="margin-top:10px">
+      <div class="growth-age-hdr" style="background:#2E7D52">Mebendazole 500 mg — single tablet</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        <strong>Age:</strong> 1 year old and above<br>
+        <strong>Dose:</strong> One 500 mg tablet, given once — chewed or swallowed<br>
+        <strong>Covers:</strong> Roundworms, whipworms, hookworms<br>
+        <strong>Available:</strong> Free at barangay health centers; used interchangeably with albendazole in the program
+      </div>
+    </div>
+
+    <div class="ho-callout green" style="margin-top:12px">
+      💡 <strong>Can be given with or without food.</strong> Some doctors recommend giving it after a meal to reduce the chance of nausea — but it is effective either way. Do not ask for a specific dose — the correct amount is decided by your doctor based on your child's age and weight.
+    </div>
+  </div>
+
+  <!-- WHAT TO EXPECT -->
+  <div class="ho-section">
+    <div class="ho-section-title">🤔 What to Expect After Deworming</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:12px;line-height:1.65">Most children have no side effects at all. When reactions do occur, they are usually mild and short-lived:</p>
+
+    <div class="feed-cols">
+      <div class="feed-col">
+        <div class="feed-col-hdr c1">✅ Normal — no action needed</div>
+        <div class="feed-col-body">
+          <div class="feed-item">Mild stomach pain or cramping</div>
+          <div class="feed-item">Nausea or loose stool for 1–2 days</div>
+          <div class="feed-item">Passing worms in the stool — this means it worked!</div>
+          <div class="feed-item">Slightly reduced appetite on the day of dosing</div>
+          <div class="feed-item">Mild dizziness or headache — resolves on its own</div>
+        </div>
+      </div>
+      <div class="feed-col">
+        <div class="feed-col-hdr" style="background:#C85A38;color:white;padding:9px 14px;font-weight:600;font-size:12.5px">⚠ See your doctor if</div>
+        <div class="feed-col-body">
+          <div class="feed-item dont">Vomiting that is severe or does not stop after a few hours</div>
+          <div class="feed-item dont">Skin rash, itching, or swelling after taking the medicine</div>
+          <div class="feed-item dont">High fever after deworming</div>
+          <div class="feed-item dont">Difficulty breathing (very rare — allergic reaction)</div>
+          <div class="feed-item dont">Seizure after deworming</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ho-callout green" style="margin-top:12px">
+      ⭐ <strong>Seeing worms in the stool is not alarming — it's proof the medicine is working.</strong> The worms are expelled as they die. This is completely normal and expected, especially with a heavy worm burden.
+    </div>
+  </div>
+
+  <!-- PREVENTION -->
+  <div class="ho-section">
+    <div class="ho-section-title">🛡️ Prevention Between Deworming Doses</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:12px;line-height:1.65">Deworming every 6 months reduces the worm burden — but reinfection can happen between doses. These habits reduce the risk:</p>
+    <div class="flag-list" style="background:#EEF7F2;border:1.5px solid #C8DDD0">
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Wash hands with soap and water before eating and after using the toilet</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Wash fruits and vegetables thoroughly before eating — especially those eaten raw</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Always wear slippers or shoes — especially when playing outside or on soil</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Drink safe, clean water — boil or use a filter if in doubt</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Keep fingernails short and clean — worm eggs hide under long nails</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Use proper toilet facilities — avoid open defecation</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Cook meat and fish thoroughly before eating</div>
+    </div>
+  </div>
+
+  <!-- MYTHS -->
+  <div class="ho-section">
+    <div class="ho-section-title">❌ Common Myths About Deworming</div>
+
+    ${[
+      ["\"My child doesn't have worms — they look healthy.\"","Most worm infections have no obvious symptoms, especially in early or moderate infections. A child can be infected and look completely normal. Deworming every 6 months is preventive — not just for children who appear sick."],
+      ["\"Deworming medicine is dangerous — I heard children got sick.\"","The medicine (albendazole and mebendazole) has an excellent safety record and is used by WHO worldwide. Past mass events where many children felt unwell after deworming were largely due to mass psychogenic reactions (anxiety spreading in a crowd) — not the medicine itself. Side effects are mild and temporary."],
+      ["\"We already dewormed once — we don't need to do it again.\"","Worm infections can recur within months of treatment, especially in environments with poor sanitation. That is why deworming must be repeated every 6 months, consistently."],
+      ["\"Garlic, coconut oil, or herbal drinks can deworm my child.\"","There is no scientific evidence that any herbal or home remedy effectively eliminates intestinal worms. Only albendazole and mebendazole have proven efficacy against the worms common in the Philippines."],
+    ].map(([m,t]) => `
+    <div class="myth-block">
+      <div class="myth-card"><div class="myth-label myth">❌ Myth</div><div class="myth-text">${m}</div></div>
+      <div class="myth-card"><div class="myth-label truth">✅ Truth</div><div class="myth-text">${t}</div></div>
+    </div>`).join('')}
+  </div>
+
+  <!-- NATIONAL PROGRAM -->
+  <div class="ho-section">
+    <div class="ho-section-title">🇵🇭 The National Deworming Program</div>
+    <div class="growth-age-block">
+      <div class="growth-age-hdr">Every January and July — it's free</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        The DOH National Deworming Month happens <strong>every January and July</strong> nationwide.<br><br>
+        <strong>Where to go:</strong><br>
+        • Barangay health centers — for preschoolers (1–4 years old) and out-of-school children<br>
+        • Public schools — for enrolled children ages 5–18<br>
+        • Rural health units (RHUs) — if your child misses the school schedule<br><br>
+        <strong>It is free, no appointment needed, and takes only a few minutes.</strong><br><br>
+        If your child misses the national deworming schedule, they can be dewormed at any time through your pediatrician or health center — deworming does not need to be limited to January and July.
+      </div>
+    </div>
+  </div>
+
+  <div class="ho-closing">
+    <div class="ho-quote">"One tablet, twice a year. It costs nothing, takes seconds, and protects your child's health, growth, and ability to learn. Make deworming a habit — every January and July."</div>
+    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
+    <div class="ho-disclaimer">Based on DOH Administrative Order No. 2015-0054: Revised Guidelines on Mass Drug Administration and Management of Adverse Events Following Deworming. National Deworming Month: January and July. For questions about your child's specific situation, consult your doctor.</div>
+  </div>
+</div>`,
+
+    tl: `
+<div class="ho">
+  <div class="ho-doc-header">
+    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
+    <div class="ho-title-sub">Pediatrician (Doktor ng mga Bata)</div>
+    <div class="ho-sched-grid">
+      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Linggo 11am–4pm · Martes 2pm–5pm<br>📞 0908 970 0299</div></div>
+      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Lun at Huw 8–11am · Mar at Sab 9am–12pm<br>📞 0976 436 5142</div></div>
+    </div>
+    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
+  </div>
+
+  <div class="ho-hero" style="background:#EEF7F2;border-color:#C8DDD0">
+    <div class="ho-hero-title">🪱 Pagpupurga ng Inyong Anak</div>
+    <div class="ho-hero-sub">Bakit mahalaga, sino ang kailangan, at ano ang inaasahan — batay sa DOH Administrative Order 2015-0054</div>
+    <div class="ho-intro" style="border-color:#2E7D52">
+      Ang mga intestinal worms (soil-transmitted helminths o STH) ay isang malaking isyu sa pampublikong kalusugan sa Pilipinas — nakakaapekto sa milyun-milyong bata at tahimik na nagdudulot ng mahinang nutrisyon, mabagal na paglaki, anemia, at kahirapan sa pag-aaral. <strong>Ang magandang balita: ang pagpupurga ay simple, ligtas, at libre.</strong> Isang tableta bawat 6 buwan ang kailangan para protektahan ang inyong anak.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">🔍 Bakit Problema ang mga Bulate</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Ang mga intestinal worms ay hindi laging nagpapakita ng malinaw na sintomas — maraming infected na bata ang mukhang malusog. Pero sa loob, ang mga bulate ay tahimik na nagdudulot ng pinsala:</p>
+    <div class="nutrient-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr))">
+      ${[
+        ["🥗","Malnutrition","Ang mga bulate ay nakikipagkumpetensya sa inyong anak para sa nutrients mula sa pagkain — nagdudulot ng mahinang pagtaas ng timbang at stunted growth"],
+        ["🩸","Anemia","Ang mga hookworm ay kumakain ng dugo — nagdudulot ng iron-deficiency anemia, pamumutla, at madaling pagod"],
+        ["🧠","Mahinang performance sa paaralan","Ang worm burden ay konektado sa mababang konsentrasyon, mas mababang scores, at absenteeism sa paaralan"],
+        ["😴","Chronic na pagod","Ang mga batang may matinding worm infection ay may mas kaunting lakas para sa paglalaro, pagkatuto, at physical activity"],
+        ["🤢","Sakit sa tiyan","Ang ilang bata ay may paulit-ulit na sakit ng tiyan, bloating, o diarrhea — bagaman marami ang walang sintomas"],
+      ].map(([e,n,d]) => `
+      <div class="nutrient-card">
+        <div class="n-icon">${e}</div>
+        <div class="n-name">${n}</div>
+        <div class="n-sources">${d}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">🌱 Paano Nakakakuha ng Bulate ang mga Bata</div>
+    <div class="growth-age-block">
+      <div class="growth-age-hdr">Mga karaniwang paraan ng pagkalat</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.8">
+        🤲 Paglalakad nang walang tsinelas sa contaminated na lupa — ang hookworm larvae ay maaaring tumagos sa balat<br>
+        🥬 Pagkain ng hindi nahugasang gulay o prutas na pinalaki sa contaminated na lupa<br>
+        💧 Pag-inom o paggamit ng maruming tubig<br>
+        🖐️ Pagdikit ng kamay sa bibig pagkatapos humawak ng contaminated na lupa o ibabaw<br>
+        🚽 Mahinang sanitation at open defecation sa komunidad<br><br>
+        <div style="background:#EEF7F2;border-radius:8px;padding:10px;font-size:12.5px;color:#4A5752">
+          <strong style="color:#2E7D52">Ang tatlong pangunahing bulate sa Pilipinas:</strong><br>
+          • <em>Ascaris lumbricoides</em> (roundworm) — pinaka-karaniwan<br>
+          • <em>Trichuris trichiura</em> (whipworm)<br>
+          • Hookworms (<em>Necator americanus, Ancylostoma duodenale</em>)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">📋 Ang DOH Deworming Schedule (AO 2015-0054)</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Inirerekomenda ng DOH ang pagpupurga <strong>dalawang beses sa isang taon (bawat 6 buwan)</strong> para sa lahat ng batang 1–12 taong gulang. Ang National Deworming Month ay sinisigurado bawat <strong>Enero at Hulyo.</strong></p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr">Sino ang dapat magpurga</div>
+      <div style="background:white">
+        ${[
+          ["👶 1–4 taong gulang (Pre-school age)", "Community-based deworming sa pamamagitan ng barangay health centers at daycare centers — Enero at Hulyo"],
+          ["🧒 5–12 taong gulang (School-age)", "School-based deworming sa mga pampublikong paaralan — Enero at Hulyo; available din sa health centers para sa hindi enrolled"],
+          ["👩 Mga buntis (2nd at 3rd trimester)", "Ligtas magpurga pagkatapos ng unang trimester — tanungin ang inyong OB o midwife"],
+          ["👩‍🌾 Iba pang high-risk na grupo", "Mga kababaihang nasa edad panganak, food handlers, magsasaka, at indigenous na populasyon — ayon sa mga guideline ng DOH"],
+        ].map(([g,s],i,arr) => `
+        <div style="padding:11px 14px;${i<arr.length-1?'border-bottom:1px solid #C8DDD0':''}">
+          <div style="font-size:13.5px;font-weight:600;color:#2E7D52;margin-bottom:3px">${g}</div>
+          <div style="font-size:12.5px;color:#4A5752;line-height:1.5">${s}</div>
+        </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      ⚠ <strong>Ang mga batang wala pang 1 taong gulang ay HINDI binibigyan ng deworming medicine</strong> sa ilalim ng DOH mass deworming program. Ang minimum na edad ay 12 buwan (1 taong gulang).
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">💊 Ang Gamot para sa Pagpupurga</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:12px;line-height:1.65">Dalawang gamot ang ginagamit sa Philippine DOH deworming program — pareho ay ligtas, epektibo, at ibinibigay bilang isang single dose:</p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#2E7D52">Albendazole 400 mg — isang tableta</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        <strong>Edad:</strong> 1 taong gulang pataas<br>
+        <strong>Dose:</strong> Isang 400 mg tablet, ibinibigay nang isang beses — nguya o lunukin<br>
+        <strong>Para sa mga bata 1–2 taong gulang:</strong> Ang tableta ay dinudurog at hinaluhalo sa kaunting pagkain o tubig<br>
+        <strong>Sumasaklaw sa:</strong> Roundworms, whipworms, hookworms<br>
+        <strong>Available:</strong> Libre sa mga barangay health center sa panahon ng National Deworming Month; available din sa mga parmasya
+      </div>
+    </div>
+
+    <div class="growth-age-block" style="margin-top:10px">
+      <div class="growth-age-hdr" style="background:#2E7D52">Mebendazole 500 mg — isang tableta</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        <strong>Edad:</strong> 1 taong gulang pataas<br>
+        <strong>Dose:</strong> Isang 500 mg tablet, ibinibigay nang isang beses — nguya o lunukin<br>
+        <strong>Sumasaklaw sa:</strong> Roundworms, whipworms, hookworms<br>
+        <strong>Available:</strong> Libre sa mga barangay health center; ginagamit nang kahalili ng albendazole sa programa
+      </div>
+    </div>
+
+    <div class="ho-callout green" style="margin-top:12px">
+      💡 <strong>Maaaring ibigay nang may o walang pagkain.</strong> Inirerekomenda ng ilang doktor na ibigay ito pagkatapos kumain para mabawasan ang posibilidad ng pagduduwal — ngunit epektibo ito sa alinmang paraan. Huwag humingi ng specific na dose — ang tamang dami ay ipapasya ng inyong doktor batay sa edad at timbang ng inyong anak.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">🤔 Ano ang Inaasahan Pagkatapos ng Pagpupurga</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:12px;line-height:1.65">Karamihan sa mga bata ay walang side effects. Kapag may reaksyon, ito ay karaniwang banayad at pansamantala:</p>
+
+    <div class="feed-cols">
+      <div class="feed-col">
+        <div class="feed-col-hdr c1">✅ Normal — hindi kailangan ng aksyon</div>
+        <div class="feed-col-body">
+          <div class="feed-item">Banayad na sakit ng tiyan o cramps</div>
+          <div class="feed-item">Pagduduwal o malambot na dumi ng 1–2 araw</div>
+          <div class="feed-item">Paglabas ng mga bulate sa dumi — ibig sabihin, gumana ang gamot!</div>
+          <div class="feed-item">Bahagyang pagbaba ng gana sa pagkain sa araw ng pag-inom</div>
+          <div class="feed-item">Banayad na pagkahilo o sakit ng ulo — nawawala nang kusa</div>
+        </div>
+      </div>
+      <div class="feed-col">
+        <div class="feed-col-hdr" style="background:#C85A38;color:white;padding:9px 14px;font-weight:600;font-size:12.5px">⚠ Pumunta sa doktor kung</div>
+        <div class="feed-col-body">
+          <div class="feed-item dont">Matinding pagsusuka o hindi tumigil pagkatapos ng ilang oras</div>
+          <div class="feed-item dont">Pantal sa balat, kati, o pamamaga pagkatapos uminom ng gamot</div>
+          <div class="feed-item dont">Mataas na lagnat pagkatapos ng pagpupurga</div>
+          <div class="feed-item dont">Hirap huminga (napakabihira — allergic reaction)</div>
+          <div class="feed-item dont">Seizure pagkatapos ng pagpupurga</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ho-callout green" style="margin-top:12px">
+      ⭐ <strong>Ang paglabas ng mga bulate sa dumi ay hindi dapat ikabahala — patunay ito na gumagana ang gamot.</strong> Ang mga bulate ay inilalabas habang namamatay sila. Ito ay ganap na normal at inaasahan, lalo na kapag may matinding worm burden.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">🛡️ Pag-iwas sa Pagitan ng mga Deworming Dose</div>
+    <div class="flag-list" style="background:#EEF7F2;border:1.5px solid #C8DDD0">
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Hugasan ang mga kamay ng sabon at tubig bago kumain at pagkatapos gumamit ng banyo</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Hugasan nang mabuti ang mga prutas at gulay bago kainin — lalo na ang mga kinakain nang hilaw</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Palaging magsuot ng tsinelas o sapatos — lalo na kapag naglalaro sa labas o sa lupa</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Uminom ng ligtas at malinis na tubig — pakuluan o gumamit ng filter kung may duda</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Panatilihing maigsi at malinis ang mga kuko — nagtatago ang mga itlog ng bulate sa ilalim ng mahabang kuko</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Gumamit ng tamang palikuran — iwasan ang open defecation</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span>Lutuin nang mabuti ang karne at isda bago kainin</div>
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">❌ Mga Maling Paniniwala Tungkol sa Pagpupurga</div>
+
+    ${[
+      ["\"Walang bulate ang anak ko — mukhang malusog naman siya.\"","Karamihan sa worm infections ay walang malinaw na sintomas, lalo na sa mga maagang o katamtamang infeksyon. Ang bata ay maaaring infected at mukhang ganap na normal. Ang pagpupurga bawat 6 buwan ay preventive — hindi lang para sa mga batang mukhang may sakit."],
+      ["\"Mapanganib ang gamot sa pagpupurga — narinig ko na nagkasakit ang mga bata.\"","Ang gamot (albendazole at mebendazole) ay may mahusay na safety record at ginagamit ng WHO sa buong mundo. Ang mga nakaraang mass events kung saan maraming bata ang nakaramdam ng hindi maganda pagkatapos ng pagpupurga ay karaniwang dahil sa mass psychogenic reactions (anxiety na kumakalat sa grupo) — hindi dahil sa gamot mismo. Ang mga side effects ay banayad at pansamantala."],
+      ["\"Nagpurga na kami noon — hindi na kailangan ulitin.\"","Ang worm infections ay maaaring bumalik sa loob ng ilang buwan pagkatapos ng treatment, lalo na sa mga kapaligiran na may mahinang sanitation. Kaya naman ang pagpupurga ay kailangang ulitin bawat 6 buwan, nang tuloy-tuloy."],
+      ["\"Ang bawang, coconut oil, o herbal drinks ay makakapagpurga sa aking anak.\"","Walang siyentipikong ebidensya na ang kahit anong herbal o home remedy ay epektibong nag-aalis ng intestinal worms. Tanging albendazole at mebendazole lamang ang may napatunayang bisa laban sa mga bulate na karaniwan sa Pilipinas."],
+    ].map(([m,t]) => `
+    <div class="myth-block">
+      <div class="myth-card"><div class="myth-label myth">❌ Mali</div><div class="myth-text">${m}</div></div>
+      <div class="myth-card"><div class="myth-label truth">✅ Totoo</div><div class="myth-text">${t}</div></div>
+    </div>`).join('')}
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title">🇵🇭 Ang National Deworming Program</div>
+    <div class="growth-age-block">
+      <div class="growth-age-hdr">Bawat Enero at Hulyo — libre ito</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        Ang DOH National Deworming Month ay nangyayari <strong>bawat Enero at Hulyo</strong> sa buong bansa.<br><br>
+        <strong>Saan pumunta:</strong><br>
+        • Barangay health centers — para sa mga preschooler (1–4 taong gulang) at out-of-school children<br>
+        • Mga pampublikong paaralan — para sa mga enrolled na bata 5–18 taong gulang<br>
+        • Rural health units (RHUs) — kung napalampas ng inyong anak ang school schedule<br><br>
+        <strong>Libre ito, hindi kailangan ng appointment, at ilang minuto lang.</strong><br><br>
+        Kung napalampas ng inyong anak ang national deworming schedule, maaari silang mapurga anumang oras sa pamamagitan ng inyong pediatrician o health center — hindi kailangang limitahan ang pagpupurga sa Enero at Hulyo lang.
+      </div>
+    </div>
+  </div>
+
+  <div class="ho-closing">
+    <div class="ho-quote">"Isang tableta, dalawang beses sa isang taon. Libre, ilang segundo lang, at nagpoprotekta sa kalusugan, paglaki, at kakayahang matuto ng inyong anak. Gawing ugali ang pagpupurga — bawat Enero at Hulyo."</div>
+    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
+    <div class="ho-disclaimer">Batay sa DOH Administrative Order No. 2015-0054: Revised Guidelines on Mass Drug Administration and Management of Adverse Events Following Deworming. National Deworming Month: Enero at Hulyo. Para sa mga katanungan tungkol sa specific na sitwasyon ng inyong anak, kumonsulta sa inyong doktor.</div>
+  </div>
+</div>`
+  }
+};
+
+// ── YOUTH VIOLENCE PREVENTION HANDOUT ────────────────────────────────────
+HANDOUTS.violence = {
+  title: {
+    en: "Protecting Our Children from Violence",
+    tl: "Pangangalaga sa Ating mga Anak mula sa Karahasan"
+  },
+  content: {
+    en: `
+<div class="ho">
+  <div class="ho-doc-header">
+    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
+    <div class="ho-title-sub">Pediatrician</div>
+    <div class="ho-sched-grid">
+      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Sun 11am–4pm · Tue 2pm–5pm<br>📞 0908 970 0299</div></div>
+      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Mon &amp; Thu 8–11am · Tue &amp; Sat 9am–12pm<br>📞 0976 436 5142</div></div>
+    </div>
+    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
+  </div>
+
+  <div class="ho-hero" style="background:#FDF3EE;border-color:#F0C4A8">
+    <div class="ho-hero-title" style="color:#C85A38">🛡️ Protecting Our Children from Violence</div>
+    <div class="ho-hero-sub">A guide for parents — warning signs, how to talk about it, and what you can do every day</div>
+    <div class="ho-intro" style="border-color:#C85A38">
+      In light of recent incidents of violence involving young people in the Philippines, many parents are scared and unsure of what to do. <strong>The most powerful protection you can give your child is not outside — it is inside your home.</strong> A connected, communicating family is the single greatest protective factor against youth violence — whether your child is the one at risk of harm, or the one struggling in silence. This handout is for every parent, for every age.
+    </div>
+  </div>
+
+  <!-- SECTION 1: UNDERSTAND -->
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🔍 Understanding Youth Violence</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Violence among young people rarely comes out of nowhere. It almost always builds over time — through pain, isolation, trauma, bullying, or untreated mental health struggles. Understanding this helps us intervene early, before a crisis happens.</p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#C85A38">Why young people become violent</div>
+      <div style="background:white">
+        ${[
+          ["😔 Unaddressed emotional pain","Anger, sadness, shame, or hopelessness that has never been talked about or treated — especially after trauma, loss, or abuse"],
+          ["🚫 Feeling rejected and alone","Social isolation, exclusion by peers, feeling no one cares or understands — these are among the strongest predictors"],
+          ["👊 Exposure to violence","Children who witness violence at home, in the community, or constantly through media begin to see it as normal and acceptable"],
+          ["📱 Online exposure and influence","Violent content, online radicalization, and peer glorification of aggression can normalize and encourage violence"],
+          ["🏫 Bullying — both as victim and perpetrator","Children who are bullied are at higher risk of becoming violent. Children who bully others are also at serious risk of future violent behavior"],
+          ["🧠 Untreated mental health conditions","Depression, anxiety, conduct disorder, and impulse control problems — when unrecognized and untreated — are significant risk factors"],
+          ["👪 Family environment","Harsh discipline, domestic violence in the home, absent parenting, or lack of emotional warmth all increase a child's risk"],
+        ].map(([r,d],i,arr) => `
+        <div style="padding:10px 14px;${i<arr.length-1?'border-bottom:1px solid #F0C4A8':''}">
+          <div style="font-size:13px;font-weight:600;color:#C85A38;margin-bottom:3px">${r}</div>
+          <div style="font-size:12.5px;color:#4A5752;line-height:1.5">${d}</div>
+        </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      ⭐ <strong>Important perspective:</strong> The vast majority of children who struggle emotionally — including those who are bullied, isolated, or angry — will never become violent. Warning signs are reasons to reach out and help, not to label or fear your child.
+    </div>
+  </div>
+
+  <!-- SECTION 2: WARNING SIGNS -->
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">⚠️ Warning Signs to Watch For</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">These are behaviors that suggest a child or teen needs help — not judgment. <strong>The earlier you notice and respond, the better the outcome.</strong></p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#C85A38">Signs your child may be struggling and at risk</div>
+      <div style="background:white">
+        <div style="padding:10px 14px;border-bottom:1px solid #F0C4A8">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">🗣️ Things they say or write</div>
+          ${["Talks, writes, draws, or posts on social media about death, violence, or harming others","Makes threats — even casually, even as a \"joke\" — take all threats seriously","Expresses feelings of hopelessness: \"No one cares,\" \"I want to disappear,\" \"Everyone would be better off without me\"","Obsession with violent events, shooters, or weapons in conversation or online activity"].map(i => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #F0C4A8;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+        <div style="padding:10px 14px;border-bottom:1px solid #F0C4A8">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">😤 Changes in behavior</div>
+          ${["Sudden withdrawal from family, friends, and activities they used to enjoy","Explosive anger, loss of temper daily, or extreme mood swings","Increasingly cruel or aggressive behavior — hurting animals, bullying peers, destroying property","Frequent fighting or seeking out physical conflict"].map(i => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #F0C4A8;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+        <div style="padding:10px 14px;border-bottom:1px solid #F0C4A8">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">📚 School and social changes</div>
+          ${["Sudden drop in grades or school attendance","No longer has friends or mentions being excluded, teased, or humiliated","Skips school or invents reasons to stay home","Extreme fear about going to school — may signal they are being bullied"].map(i => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #F0C4A8;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+        <div style="padding:10px 14px">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">🔴 Serious red flags — act immediately</div>
+          ${["Carrying or hiding a weapon — knife, bladed object, or any dangerous item","Fascination with how to harm others, or researching methods of violence","Any direct statement of intent to hurt a specific person or group","Signs of self-harm (cuts, burns on body) or talk of suicide"].map(i => `<div style="font-size:13px;color:#C85A38;font-weight:500;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #C85A38;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      🚨 <strong>If your child says anything about wanting to hurt themselves or others — take it seriously every single time.</strong> Do not dismiss it as "just for attention" or "dramatic." It is always better to seek help and be wrong than to ignore it and be right.
+    </div>
+  </div>
+
+  <!-- SECTION 3: TALK TO YOUR CHILD -->
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">💬 How to Talk to Your Child About Violence</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">After a violent incident in the news or nearby community, children of all ages need their parents to help them make sense of what happened. Silence makes children more anxious — not less.</p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#2E7D52">For younger children (ages 4–8)</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        ✔ Keep it simple and reassuring: <em>"Something bad happened at a school far away. You are safe. We are going to keep you safe."</em><br>
+        ✔ Ask what they've heard — children often have incorrect or scarier versions from classmates<br>
+        ✔ Validate their feelings: <em>"It's okay to feel scared. I feel worried too. Let's talk about it."</em><br>
+        ✔ Maintain normal routines — predictability is enormously calming for young children<br>
+        ✘ Do not expose them to news coverage — repeated violent images cause trauma even through a screen
+      </div>
+    </div>
+
+    <div class="growth-age-block" style="margin-top:10px">
+      <div class="growth-age-hdr" style="background:#2E7D52">For older children and teens (ages 9–18)</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        ✔ Ask open questions: <em>"Have you heard about what happened? How are you feeling about it?"</em><br>
+        ✔ Listen more than you talk — your teen needs to be heard, not lectured<br>
+        ✔ Acknowledge the fear: <em>"It makes sense that you're scared. I am too."</em><br>
+        ✔ Empower them: <em>"If you ever feel unsafe at school, or if someone says something that worries you, I want you to tell me or a trusted adult immediately."</em><br>
+        ✔ Ask directly: <em>"Are you or anyone you know being bullied? Is anyone talking about hurting themselves or others?"</em><br>
+        ✘ Do not minimize: <em>"Don't worry, it won't happen here"</em> — this feels dismissive and stops conversation<br>
+        ✘ Do not have this conversation in anger or after an argument — choose a calm moment
+      </div>
+    </div>
+
+    <div class="ho-callout green" style="margin-top:12px">
+      💡 <strong>The goal is not one conversation — it is an open door.</strong> Tell your child: <em>"You can always come to me with anything you're worried about — no matter what it is. I will not overreact. I just want to help you."</em> Then keep that promise.
+    </div>
+  </div>
+
+  <!-- SECTION 4: WHAT PARENTS CAN DO -->
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🏠 What Parents Can Do Every Day</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Violence prevention doesn't start after a crisis. It is built — slowly, daily — through connection, presence, and the environment you create at home.</p>
+
+    ${[
+      {
+        icon: "❤️",
+        title: "Stay connected to your child",
+        items: [
+          "Eat meals together as often as possible — research consistently shows family dinnertime is one of the strongest protective factors against risky behavior",
+          "Know their friends, their school life, their online presence — not through surveillance, but through genuine interest",
+          "Ask specific questions, not just \"How was school?\" Try: \"What made you laugh today?\" or \"Was there anything hard today?\"",
+          "Notice changes — in mood, in friends, in habits. Small changes over time matter more than big explosions",
+        ]
+      },
+      {
+        icon: "🗣️",
+        title: "Model healthy conflict resolution",
+        items: [
+          "How you handle anger, disagreement, and frustration is your child's first lesson in conflict management",
+          "Never normalize physical force, shouting, or threats as a way to resolve disagreement in the home",
+          "Name your emotions out loud: \"I'm frustrated right now. I'm going to take a few breaths before I respond.\" This teaches your child to do the same",
+          "Apologize to your child when you are wrong — this builds trust and models accountability",
+        ]
+      },
+      {
+        icon: "📱",
+        title: "Manage screen time and online exposure",
+        items: [
+          "Know what your child is watching, playing, and engaging with online — violent content normalizes aggression",
+          "Follow your child on social media — not to spy, but to stay connected to their world",
+          "Watch for online bullying (cyberbullying) — it is often more damaging than in-person bullying because it follows children home",
+          "Keep devices out of bedrooms at night — poor sleep worsens emotional regulation and impulse control",
+        ]
+      },
+      {
+        icon: "🧠",
+        title: "Take mental health seriously",
+        items: [
+          "Persistent sadness, anxiety, anger, or withdrawal in your child is not a phase to wait out — it is a signal to act",
+          "Seek professional help early — a school counselor, pediatrician, or child psychiatrist can make an enormous difference",
+          "Do not shame your child for struggling emotionally — this silences them exactly when they need to speak",
+          "If your child is being bullied, report it to the school and document everything. Do not tell them to \"just ignore it\" — bullying rarely stops without adult intervention",
+        ]
+      },
+      {
+        icon: "🏃",
+        title: "Channel energy positively",
+        items: [
+          "Sports, arts, music, community service — structured activities give children a sense of belonging, competence, and positive identity",
+          "A child with something to be proud of and people to belong to is far less likely to seek that belonging in harmful places",
+          "Encourage friendships with children whose values align with yours — peers are the strongest influence on teen behavior",
+        ]
+      },
+    ].map(s => `
+    <div class="growth-age-block" style="margin-bottom:10px">
+      <div class="growth-age-hdr" style="background:#2E7D52">${s.icon} ${s.title}</div>
+      <div style="padding:12px 14px;background:white">
+        ${s.items.map(i => `<div style="font-size:13px;color:#4A5752;padding:4px 0 4px 12px;line-height:1.55;border-left:2px solid #C8DDD0;margin-bottom:5px">${i}</div>`).join('')}
+      </div>
+    </div>`).join('')}
+  </div>
+
+  <!-- SECTION 5: WHAT TO DO IF WORRIED -->
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🚨 What to Do If You Are Worried About Your Child — Or Someone Else's</div>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#C85A38">If you are worried about your own child</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.8">
+        ✔ <strong>Talk to them directly and calmly</strong> — not in anger. Let them know you've noticed something and you're concerned, not angry<br>
+        ✔ <strong>See your pediatrician</strong> — we can screen for mental health concerns and refer to the right professional<br>
+        ✔ <strong>Contact the school guidance counselor</strong> — especially if the issue involves bullying or school safety<br>
+        ✔ <strong>If there is immediate danger</strong> — take your child to the nearest hospital emergency room for evaluation<br>
+        ✔ <strong>Remove access to weapons</strong> — any bladed objects, firearms, or dangerous items in the home should be secured or removed if you have any concern about safety
+      </div>
+    </div>
+
+    <div class="growth-age-block" style="margin-top:10px">
+      <div class="growth-age-hdr" style="background:#C85A38">If you are worried about another child or teen</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.8">
+        ✔ <strong>Tell someone — do not stay silent.</strong> Most school violence is preceded by warning signs that others noticed but did not report<br>
+        ✔ Report your concern to the child's teacher, the school principal, or school guidance counselor<br>
+        ✔ If you believe there is immediate danger, contact the school or authorities directly<br>
+        ✔ Teach your own child: <em>"If you hear a classmate say they want to hurt someone — that is not something to keep secret. Tell a trusted adult immediately. You are not being a traitor. You are being a friend."</em>
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      🚨 <strong>If your child or any child mentions suicide or a plan to harm others — this is an emergency.</strong> Do not leave them alone. Go to the nearest hospital emergency department or call for help. Do not try to manage this alone at home.
+    </div>
+  </div>
+
+  <!-- SECTION 6: WHAT CHILDREN NEED -->
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#2E7D52;border-color:#C8DDD0">💚 What Children Actually Need to Stay Safe</div>
+    <div class="flag-list" style="background:#EEF7F2;border:1.5px solid #C8DDD0">
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>At least one adult who is fully on their side</strong> — a parent, lolo/lola, tito/tita, teacher — someone they know will not judge them</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>To feel seen and valued</strong> — not just for achievements, but for who they are</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>A home where emotions are safe to express</strong> — where sadness, anger, and fear are met with understanding, not punishment</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Consistent rules and boundaries</strong> — with warmth, not harshness. Structure is not the enemy of connection</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Something to belong to</strong> — a team, a group, a community, a faith — belonging prevents isolation</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Permission to ask for help</strong> — and the knowledge that asking is strength, not weakness</div>
+    </div>
+  </div>
+
+  <div class="ho-closing">
+    <div class="ho-quote" style="color:#C85A38">"The best protection against violence is a child who knows they are loved, heard, and never alone — and who knows exactly where to turn when they are struggling."</div>
+    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
+    <div class="ho-disclaimer">This handout is based on guidance from the American Academy of Pediatrics (AAP), American Academy of Child and Adolescent Psychiatry (AACAP), the American Psychological Association (APA), and the CDC Youth Violence Prevention program. It is for educational purposes only. If you have urgent concerns about your child's safety or the safety of others, please seek professional help immediately.</div>
+  </div>
+</div>`,
+
+    tl: `
+<div class="ho">
+  <div class="ho-doc-header">
+    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
+    <div class="ho-title-sub">Pediatrician (Doktor ng mga Bata)</div>
+    <div class="ho-sched-grid">
+      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Linggo 11am–4pm · Martes 2pm–5pm<br>📞 0908 970 0299</div></div>
+      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Lun at Huw 8–11am · Mar at Sab 9am–12pm<br>📞 0976 436 5142</div></div>
+    </div>
+    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
+  </div>
+
+  <div class="ho-hero" style="background:#FDF3EE;border-color:#F0C4A8">
+    <div class="ho-hero-title" style="color:#C85A38">🛡️ Pangangalaga sa Ating mga Anak mula sa Karahasan</div>
+    <div class="ho-hero-sub">Gabay para sa mga magulang — mga babala, paano makipag-usap, at kung ano ang magagawa ninyo araw-araw</div>
+    <div class="ho-intro" style="border-color:#C85A38">
+      Sa harap ng mga nakaraang insidente ng karahasan na kinasasangkutan ng mga kabataan sa Pilipinas, maraming magulang ang natakot at hindi alam ang gagawin. <strong>Ang pinaka-makapangyarihang proteksyon na maibibigay ninyo sa inyong anak ay hindi nasa labas — nasa loob ng inyong tahanan.</strong> Ang isang pamilyang konektado at nagkakausap ay ang pinakamalaking proteksyon laban sa karahasan ng kabataan — kung ang inyong anak ay nasa panganib ng pinsala, o kung siya ay nagtatago ng kanyang mga pagdurusa. Ang handout na ito ay para sa bawat magulang, para sa bawat edad.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🔍 Pag-unawa sa Karahasan ng Kabataan</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Ang karahasan sa kabataan ay bihirang manggaling nang wala sa anumang babala. Halos palagi itong nagtatayo sa paglipas ng panahon — sa pamamagitan ng sakit, pagkaisolate, trauma, bullying, o hindi nagamot na mental health struggles. Ang pag-unawa dito ay tumutulong sa atin na makialam nang maaga, bago pa mangyari ang isang krisis.</p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#C85A38">Bakit nagiging marahas ang mga kabataan</div>
+      <div style="background:white">
+        ${[
+          ["😔 Hindi natutugunan na emosyonal na sakit","Galit, kalungkutan, kahihiyan, o kawalan ng pag-asa na hindi kailanman napag-usapan o natugunan — lalo na pagkatapos ng trauma, pagkawala, o pang-aabuso"],
+          ["🚫 Pakiramdam na tinanggihan at nag-iisa","Social isolation, pagbubukod ng mga kapwa, pakiramdam na walang nagmamalasakit o nakakaunawa — isa ito sa mga pinaka-malakas na predictors"],
+          ["👊 Exposure sa karahasan","Ang mga batang nasaksi ng karahasan sa bahay, sa komunidad, o patuloy sa media ay nagsisimulang makita ito bilang normal at katanggap-tanggap"],
+          ["📱 Online exposure at impluwensya","Ang marahas na nilalaman, online radicalization, at glorification ng aggression ng mga kapwa ay maaaring gawing normal at hikayatin ang karahasan"],
+          ["🏫 Bullying — bilang biktima at bilang nagbubully","Ang mga batang na-bully ay nasa mas mataas na panganib na maging marahas. Ang mga nagbubully ng iba ay nasa seryosong panganib din ng marahas na pag-uugali sa hinaharap"],
+          ["🧠 Hindi nagamot na mental health conditions","Depression, anxiety, conduct disorder, at impulse control problems — kapag hindi nakilala at natugunan — ay mga makabuluhang risk factors"],
+          ["👪 Kapaligiran sa pamilya","Malupit na disiplina, domestic violence sa bahay, absent na magulang, o kawalan ng emosyonal na pagmamahal ay nagpapataas ng panganib ng bata"],
+        ].map(([r,d],i,arr) => `
+        <div style="padding:10px 14px;${i<arr.length-1?'border-bottom:1px solid #F0C4A8':''}">
+          <div style="font-size:13px;font-weight:600;color:#C85A38;margin-bottom:3px">${r}</div>
+          <div style="font-size:12.5px;color:#4A5752;line-height:1.5">${d}</div>
+        </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      ⭐ <strong>Mahalagang pananaw:</strong> Ang napakaraming bata na nahihirapan emosyonal — kasama ang mga na-bully, nag-iisa, o galit — ay hindi magiging marahas. Ang mga babala ay mga dahilan para maabot at tulungan, hindi para etiketa o takutan ang inyong anak.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">⚠️ Mga Babala na Dapat Bantayan</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Ito ay mga ugali na nagpapakita na ang bata o teen ay nangangailangan ng tulong — hindi ng hatol. <strong>Mas maaga kayong makapansin at tumugon, mas maganda ang kinalabasan.</strong></p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#C85A38">Mga senyales na ang inyong anak ay nahihirapan at nasa panganib</div>
+      <div style="background:white">
+        <div style="padding:10px 14px;border-bottom:1px solid #F0C4A8">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">🗣️ Mga sinasabi o isinusulat</div>
+          ${["Nagkukuwento, sumusulat, gumaguhit, o nagpo-post sa social media tungkol sa kamatayan, karahasan, o pag-aari ng iba","Gumagawa ng mga banta — kahit pabiro, kahit casual — seryosohin ang lahat ng banta","Nagpapahayag ng kawalan ng pag-asa: \"Walang nagmamalasakit,\" \"Gusto kong mawala,\" \"Mas magiging mabuti ang lahat kung wala ako\"","Obsesyon sa marahas na mga pangyayari, mga mamamatay, o mga sandata sa pag-uusap o online na aktibidad"].map(i => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #F0C4A8;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+        <div style="padding:10px 14px;border-bottom:1px solid #F0C4A8">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">😤 Mga pagbabago sa ugali</div>
+          ${["Biglang pag-iwas sa pamilya, mga kaibigan, at mga aktibidad na dati nilang gustong gawin","Pagsabog ng galit, pag-init ng ulo araw-araw, o matinding pagbabago ng mood","Lalong malupit o agresibong ugali — pag-saktan ng mga hayop, pambubully ng mga kapwa, pagsira ng ari-arian","Madalas na away o paghahanap ng physical na labanan"].map(i => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #F0C4A8;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+        <div style="padding:10px 14px;border-bottom:1px solid #F0C4A8">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">📚 Mga pagbabago sa paaralan at social</div>
+          ${["Biglang pagbaba ng grades o attendance sa paaralan","Wala nang mga kaibigan o nagbanggit ng pagbubukod, panggigili, o pagpapahiya","Nilalaktawan ang paaralan o nag-iimbento ng mga dahilan para manatili sa bahay","Matinding takot sa pagpunta sa paaralan — maaaring senyales na siya ay nino-nobela"].map(i => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #F0C4A8;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+        <div style="padding:10px 14px">
+          <div style="font-size:12px;font-weight:600;color:#C85A38;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">🔴 Seryosong red flags — kumilos agad</div>
+          ${["Nagtatago o nagdadala ng sandata — patalim, balaraw, o anumang mapanganib na bagay","Fascinasyon sa kung paano masaktan ang iba, o naghahanap ng mga paraan ng karahasan","Anumang direktang pahayag ng intensyon na saktan ang isang tiyak na tao o grupo","Mga senyales ng self-harm (mga hiwa, paso sa katawan) o pag-usap ng suicide"].map(i => `<div style="font-size:13px;color:#C85A38;font-weight:500;padding:2px 0 2px 12px;line-height:1.5;border-left:2px solid #C85A38;margin-bottom:4px">${i}</div>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      🚨 <strong>Kung ang inyong anak ay nagsabi ng anumang bagay tungkol sa pagsakit sa sarili o sa iba — seryosohin ito sa bawat pagkakataon.</strong> Huwag itapon bilang "para lang makuha ng atensyon" o "drama." Palaging mas mabuti na humingi ng tulong at maging mali kaysa balewalain at maging tama.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">💬 Paano Makipag-usap sa Inyong Anak Tungkol sa Karahasan</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Pagkatapos ng isang marahas na insidente sa balita o sa malapit na komunidad, ang mga bata ng lahat ng edad ay kailangan ng tulong ng kanilang mga magulang para maunawaan kung ano ang nangyari. Ang katahimikan ay nagpapataas ng anxiety ng mga bata — hindi nagpapababa.</p>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#2E7D52">Para sa mas batang mga anak (edad 4–8)</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        ✔ Panatilihing simple at nagpapatahimik: <em>"May masamang nangyari sa isang paaralan na malayo. Ikaw ay ligtas. Pananatilihin ka naming ligtas."</em><br>
+        ✔ Tanungin kung ano ang narinig nila — ang mga bata ay kadalasang may mas hindi tumpak o mas nakakatakot na bersyon mula sa mga kaklase<br>
+        ✔ I-validate ang kanilang damdamin: <em>"Okay lang ang matakot. Nag-aalala rin ako. Pag-usapan natin ito."</em><br>
+        ✔ Panatilihin ang normal na routine — ang predictability ay napakapanatag para sa mga batang bata<br>
+        ✘ Huwag hayaang manood ng balita — ang paulit-ulit na marahas na imahe ay nagdudulot ng trauma kahit sa pamamagitan ng screen
+      </div>
+    </div>
+
+    <div class="growth-age-block" style="margin-top:10px">
+      <div class="growth-age-hdr" style="background:#2E7D52">Para sa mga mas matatandang bata at teen (edad 9–18)</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.7">
+        ✔ Magtanong ng bukas na tanong: <em>"Narinig mo na ba ang nangyari? Paano ka nakaramdam doon?"</em><br>
+        ✔ Makinig nang higit kaysa magsalita — ang inyong teen ay kailangan na marinig, hindi bigyan ng leksyon<br>
+        ✔ Kilalanin ang takot: <em>"Makatuwiran lang na matakot. Natatakot din ako."</em><br>
+        ✔ Bigyan ng kapangyarihan: <em>"Kung makaramdam ka ng hindi ligtas sa paaralan, o kung may nagsabi ng bagay na nag-aalala sa iyo, gusto kong agad mong sabihin sa akin o sa isang pinagkakatiwalaang adulto."</em><br>
+        ✔ Magtanong nang direkta: <em>"Ikaw ba o ang sinuman na kilala mo ay nino-nobela? May nagsasalita ba tungkol sa pagsaktan ng sarili o ng iba?"</em><br>
+        ✘ Huwag baguhin ang realidad: <em>"Huwag mag-alala, hindi mangyayari dito"</em> — pakiramdam nila ito ay nagpapahinto ng usapan<br>
+        ✘ Huwag gawin ang usapang ito sa oras ng galit o pagkatapos ng argumento — pumili ng mahinahon na sandali
+      </div>
+    </div>
+
+    <div class="ho-callout green" style="margin-top:12px">
+      💡 <strong>Ang layunin ay hindi isang usapan — ito ay isang bukas na pintuan.</strong> Sabihin sa inyong anak: <em>"Maaari kang palaging lumapit sa akin sa kahit anong nag-aalala sa iyo — kahit ano pa iyon. Hindi ako mag-o-overreact. Gusto ko lang tulungan kayo."</em> Pagkatapos, tuparin ang pangakong iyon.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🏠 Ano ang Magagawa ng mga Magulang Araw-araw</div>
+    <p style="font-size:13.5px;color:#4A5752;margin-bottom:14px;line-height:1.65">Ang pag-iwas sa karahasan ay hindi nagsisimula pagkatapos ng isang krisis. Ito ay natatayo — dahan-dahan, araw-araw — sa pamamagitan ng koneksyon, presensya, at kapaligiran na nililikha ninyo sa tahanan.</p>
+
+    ${[
+      {
+        icon: "❤️",
+        title: "Manatiling konektado sa inyong anak",
+        items: [
+          "Kumain nang magkasama nang madalas hangga't maaari — patuloy na ipinapakita ng pananaliksik na ang family dinnertime ay isa sa mga pinaka-malakas na proteksyon laban sa mapanganib na ugali",
+          "Kilalanin ang kanilang mga kaibigan, buhay sa paaralan, online na presensya — hindi sa pamamagitan ng pagbabantay, kundi sa totoong interes",
+          "Magtanong ng tiyak na tanong, hindi lang \"Kumusta ang paaralan?\" Subukan: \"Ano ang nagpagawa sa iyong tawang araw na ito?\" o \"May mahirap ba ngayon?\"",
+          "Mapansin ang mga pagbabago — sa mood, sa mga kaibigan, sa mga gawi. Ang maliliit na pagbabago sa paglipas ng panahon ay mas mahalaga kaysa mga malaking pagsabog",
+        ]
+      },
+      {
+        icon: "🗣️",
+        title: "Maging modelo ng malusog na pag-resolba ng salungatan",
+        items: [
+          "Kung paano ninyo hinahawakan ang galit, hindi pagkakasundo, at frustration ay ang unang leksyon ng inyong anak sa conflict management",
+          "Huwag kailanman gawing normal ang physical force, pagsigaw, o mga banta bilang paraan ng pag-resolba ng hindi pagkakasundo sa tahanan",
+          "Pangalanan ang inyong emosyon nang malakas: \"Naiinis ako ngayon. Kukuha muna ako ng ilang hininga bago tumugon.\" Nagtuturo ito sa inyong anak na gawin ang parehong bagay",
+          "Humingi ng tawad sa inyong anak kapag nagkamali kayo — nagtatayo ito ng tiwala at nagmodelo ng accountability",
+        ]
+      },
+      {
+        icon: "📱",
+        title: "Pamahalaan ang screen time at online exposure",
+        items: [
+          "Alamin kung ano ang pinanoonood, nilalaro, at kinakalabit ng inyong anak online — ang marahas na nilalaman ay nag-normalize ng aggression",
+          "Sundan ang inyong anak sa social media — hindi para maniktik, kundi para manatiling konektado sa kanilang mundo",
+          "Bantayan ang online bullying (cyberbullying) — kadalasang mas nakapipinsala ito kaysa in-person bullying dahil sinusundan ang mga bata sa bahay",
+          "Panatilihing labas ng mga kwarto ang mga device sa gabi — ang mahinang tulog ay nagpapalala ng emotional regulation at impulse control",
+        ]
+      },
+      {
+        icon: "🧠",
+        title: "Seryosohin ang mental health",
+        items: [
+          "Ang paulit-ulit na kalungkutan, anxiety, galit, o pag-iwas ng inyong anak ay hindi isang phase na hihintayin — ito ay isang signal na kumilos",
+          "Humingi ng propesyonal na tulong nang maaga — ang school counselor, pediatrician, o child psychiatrist ay maaaring gumawa ng malaking pagkakaiba",
+          "Huwag pahiyain ang inyong anak para sa emosyonal na pagpupunyagi — tinatahimik ito sa kanila nang eksakto kapag kailangan nilang magsalita",
+          "Kung ang inyong anak ay nino-nobela, iulat ito sa paaralan at idokumento ang lahat. Huwag sabihin sa kanila na \"balewalain lang\" — ang bullying ay bihirang huminto nang walang pakikilalam ng mga adulto",
+        ]
+      },
+      {
+        icon: "🏃",
+        title: "I-channel ang enerhiya nang positibo",
+        items: [
+          "Sports, sining, musika, community service — ang mga nakabalangkas na aktibidad ay nagbibigay sa mga bata ng pakiramdam ng pagkakabilang, kakayahan, at positibong pagkakakilanlan",
+          "Ang batang may ipagmamalaki at mga taong mapapabilangan ay mas hindi malamang maghanap ng pagkakabilang na iyon sa mapanganib na lugar",
+          "Hikayatin ang mga pagkakaibigan sa mga batang may mga values na naaayon sa inyo — ang mga kapwa ay ang pinaka-malakas na impluwensya sa ugali ng teen",
+        ]
+      },
+    ].map(s => `
+    <div class="growth-age-block" style="margin-bottom:10px">
+      <div class="growth-age-hdr" style="background:#2E7D52">${s.icon} ${s.title}</div>
+      <div style="padding:12px 14px;background:white">
+        ${s.items.map(i => `<div style="font-size:13px;color:#4A5752;padding:4px 0 4px 12px;line-height:1.55;border-left:2px solid #C8DDD0;margin-bottom:5px">${i}</div>`).join('')}
+      </div>
+    </div>`).join('')}
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🚨 Ano ang Gagawin Kung Nag-aalala Kayo — Tungkol sa Inyong Anak o sa Anak ng Iba</div>
+
+    <div class="growth-age-block">
+      <div class="growth-age-hdr" style="background:#C85A38">Kung nag-aalala kayo tungkol sa inyong sariling anak</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.8">
+        ✔ <strong>Makipag-usap sa kanila nang direkta at mahinahon</strong> — hindi sa galit. Ipaalam sa kanila na napansin ninyo ang isang bagay at nag-aalala kayo, hindi nagagalit<br>
+        ✔ <strong>Bumisita sa inyong pediatrician</strong> — maaari kaming mag-screen para sa mental health concerns at mag-refer sa tamang propesyonal<br>
+        ✔ <strong>Makipag-ugnayan sa school guidance counselor</strong> — lalo na kung may kinalaman ito sa bullying o kaligtasan sa paaralan<br>
+        ✔ <strong>Kung may agarang panganib</strong> — dalhin ang inyong anak sa pinakamalapit na hospital emergency room para sa evaluation<br>
+        ✔ <strong>Alisin ang access sa mga sandata</strong> — anumang patalim, baril, o mapanganib na bagay sa bahay ay dapat ma-secure o maalis kung mayroon kayong anumang alalahanin tungkol sa kaligtasan
+      </div>
+    </div>
+
+    <div class="growth-age-block" style="margin-top:10px">
+      <div class="growth-age-hdr" style="background:#C85A38">Kung nag-aalala kayo tungkol sa anak ng ibang tao</div>
+      <div style="padding:12px 14px;background:white;font-size:13.5px;color:#4A5752;line-height:1.8">
+        ✔ <strong>Magsabi — huwag manahimik.</strong> Karamihan sa karahasan sa paaralan ay nauuna ng mga babala na napansin ng iba ngunit hindi naiulat<br>
+        ✔ Iulat ang inyong alalahanin sa guro ng bata, sa principal ng paaralan, o sa school guidance counselor<br>
+        ✔ Kung naniniwala kayong may agarang panganib, makipag-ugnayan agad sa paaralan o sa mga awtoridad<br>
+        ✔ Ituro sa inyong sariling anak: <em>"Kung marinig mong sabihin ng isang kaklase na gusto niyang saktan ang isang tao — hindi iyon dapat itago. Sabihin agad sa isang pinagkakatiwalaang adulto. Hindi ka nagtataksil. Nagmamahal ka."</em>
+      </div>
+    </div>
+
+    <div class="ho-callout orange" style="margin-top:12px">
+      🚨 <strong>Kung ang inyong anak o anumang bata ay nagbanggit ng suicide o plano na saktan ang iba — ito ay isang emergency.</strong> Huwag silang hayaang nag-iisa. Pumunta sa pinakamalapit na hospital emergency department o tumawag para sa tulong. Huwag subukang harapin ito nang mag-isa sa bahay.
+    </div>
+  </div>
+
+  <div class="ho-section">
+    <div class="ho-section-title" style="color:#2E7D52;border-color:#C8DDD0">💚 Ano ang Talagang Kailangan ng mga Bata para Manatiling Ligtas</div>
+    <div class="flag-list" style="background:#EEF7F2;border:1.5px solid #C8DDD0">
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Hindi bababa sa isang adulto na ganap na nasa kanilang panig</strong> — isang magulang, lolo/lola, tito/tita, guro — isang taong alam nilang hindi sila hahatulan</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Pakiramdam na nakikita at pinahahalagahan</strong> — hindi lang para sa mga nagagawa, kundi para sa kung sino sila</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Isang tahanan kung saan ligtas na ipahayag ang mga damdamin</strong> — kung saan ang kalungkutan, galit, at takot ay tinatanggap ng may pag-unawa, hindi parusa</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Consistent na mga panuntunan at hangganan</strong> — na may pagmamahal, hindi kabagsikan. Ang istruktura ay hindi kalaban ng koneksyon</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Isang bagay na mapapabilangan</strong> — isang team, isang grupo, isang komunidad, isang pananampalataya — ang pagkakabilang ay pumipigil sa isolation</div>
+      <div class="flag-item"><span class="flag-dot" style="color:#2E7D52">✔</span><strong>Pahintulot na humingi ng tulong</strong> — at ang kaalaman na ang paghiling ay lakas, hindi kahinaan</div>
+    </div>
+  </div>
+
+  <div class="ho-closing">
+    <div class="ho-quote" style="color:#C85A38">"Ang pinakamabuting proteksyon laban sa karahasan ay isang batang alam na siya ay minamahal, naririnig, at hindi kailanman nag-iisa — at alam kung saan lulugar kapag siya ay nahihirapan."</div>
+    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
+    <div class="ho-disclaimer">Ang handout na ito ay batay sa gabay ng American Academy of Pediatrics (AAP), American Academy of Child and Adolescent Psychiatry (AACAP), American Psychological Association (APA), at CDC Youth Violence Prevention program. Para sa educational purposes lamang. Kung mayroon kayong agarang alalahanin tungkol sa kaligtasan ng inyong anak o ng iba, mangyaring humingi ng propesyonal na tulong agad.</div>
   </div>
 </div>`
   }
