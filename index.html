@@ -853,19 +853,19 @@ body {
       </div>
     </div>
 
-    <!-- CARD: Well Baby Dev — LIVE -->
-    <div class="handout-card" data-cat="development" data-keywords="development milestones baby infant well child developmental 0-12 months gross motor fine motor language social milestone paglaki pag-unlad sanggol">
+
+    <!-- CARD: Milestone Checker — INTERACTIVE -->
+    <div class="handout-card" data-cat="development" data-keywords="development milestones checklist baby infant toddler child age tracker red flags interactive birthday">
       <div class="card-accent" style="background:linear-gradient(90deg,#2A6099,#4A80B9)"></div>
       <div class="card-body">
-        <span class="card-emoji">👶</span>
+        <span class="card-emoji">✅</span>
         <div class="card-category" style="color:#2A6099">Development</div>
-        <div class="card-title">Baby Development: Birth to 12 Months</div>
-        <div class="card-desc">What your baby should be doing at each age — gross motor, fine motor, language, and social milestones, red flags, and how to help them thrive.</div>
+        <div class="card-title">Developmental Milestone Checklist</div>
+        <div class="card-desc">Enter your child's birthday to get an age-specific milestone checklist. Screenshot your results and bring them to your next visit.</div>
       </div>
       <div class="card-footer">
         <div class="lang-btns">
-          <button class="lang-btn" style="border-color:#2A6099;color:#2A6099" onclick="openHandout('devinfant','en',event)">English</button>
-          <button class="lang-btn" style="border-color:#2A6099;color:#2A6099" onclick="openHandout('devinfant','tl',event)">Filipino</button>
+          <button class="lang-btn" style="border-color:#2A6099;color:#2A6099" onclick="openHandout('milestonecheck','en',event)">Open Checklist</button>
         </div>
         <span class="card-arrow" style="color:#2A6099">›</span>
       </div>
@@ -979,22 +979,6 @@ body {
       </div>
     </div>
 
-    <!-- CARD: Well Child Dev — LIVE -->
-    <div class="handout-card" data-cat="development" data-keywords="development milestones toddler school age child well child developmental 1-12 years gross motor fine motor language social cognitive milestone paglaki pag-unlad bata">
-      <div class="card-accent" style="background:linear-gradient(90deg,#2A6099,#4A80B9)"></div>
-      <div class="card-body">
-        <span class="card-emoji">🧒</span>
-        <div class="card-category" style="color:#2A6099">Development</div>
-        <div class="card-title">Child Development: 1 to 12 Years</div>
-        <div class="card-desc">Developmental milestones from toddler to school age — what to expect, red flags to watch for, and everyday activities that support healthy development.</div>
-      </div>
-      <div class="card-footer">
-        <div class="lang-btns">
-          <button class="lang-btn" onclick="openHandout('devchild','en',event)">English</button>
-          <button class="lang-btn" onclick="openHandout('devchild','tl',event)">Filipino</button>
-        </div>
-        <span class="card-arrow">›</span>
-      </div>
     </div>
 
   </div>
@@ -4924,627 +4908,6 @@ HANDOUTS.babyrecipes = {
   }
 };
 
-// ── WELL BABY: BIRTH TO 12 MONTHS ────────────────────────────────────────
-HANDOUTS.devinfant = {
-  title: {
-    en: "Baby Development: Birth to 12 Months",
-    tl: "Pag-unlad ng Baby: Kapanganakan hanggang 12 Buwan"
-  },
-  content: {
-    en: `
-<div class="ho">
-  <div class="ho-doc-header">
-    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
-    <div class="ho-title-sub">Pediatrician</div>
-    <div class="ho-sched-grid">
-      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Sun 11am–4pm · Tue 2pm–5pm<br>📞 0908 970 0299</div></div>
-      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Mon &amp; Thu 8–11am · Tue &amp; Sat 9am–12pm<br>📞 0976 436 5142</div></div>
-    </div>
-    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
-  </div>
-
-  <div class="ho-hero" style="background:#F0F7FF;border-color:#B8D4F0">
-    <div class="ho-hero-title" style="color:#2A6099">👶 Baby Development: Birth to 12 Months</div>
-    <div class="ho-hero-sub">What your baby should be doing — and how you can help them reach their full potential</div>
-    <div class="ho-intro" style="border-color:#2A6099">
-      Every baby develops at their own pace — and there is a <strong>normal range</strong> for every milestone. This handout shows what most babies achieve by certain ages, <strong>critical red flags</strong> that always need prompt evaluation, and simple everyday activities that support your baby's brain and body development. <strong>You — the parent — are your baby's most important teacher.</strong>
-    </div>
-  </div>
-
-  <!-- HOW TO READ -->
-  <div class="ho-section">
-    <div class="ho-callout green" style="background:#F0F7FF;border-color:#2A6099">
-      📌 <strong style="color:#2A6099">How to read this handout:</strong> Milestones listed are what <em>most</em> babies achieve by that age. Missing one milestone is not always a problem — missing several, or falling significantly behind, is when to act. When in doubt, bring your baby in for a developmental check.
-    </div>
-  </div>
-
-  <!-- AGE BLOCKS -->
-  ${[
-    {
-      age: "Newborn — 1 Month",
-      color: "#2A6099",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Moves arms and legs when awake", "Turns head side to side when lying on tummy", "Strong grasp reflex when you touch the palm"] },
-        { icon: "👁️", name: "Vision & Attention", items: ["Focuses on faces 20–30 cm away", "Startles to loud sounds", "Calms to familiar voice (especially mother's)"] },
-        { icon: "💬", name: "Communication", items: ["Cries to express hunger, discomfort, or tiredness", "Makes small throat sounds"] },
-        { icon: "❤️", name: "Social", items: ["Prefers human faces over objects", "Brief eye contact during feeding"] },
-      ],
-      redflag: null,
-      help: ["Talk to your baby during feeding, bathing, and diaper changes — your voice is the most important stimulus", "Skin-to-skin contact (kangaroo care) supports brain development and bonding", "Tummy time for a few minutes when awake and supervised — this builds neck strength"]
-    },
-    {
-      age: "2 Months",
-      color: "#2A6099",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Holds head up briefly during tummy time", "Less curled — arms and legs more extended"] },
-        { icon: "👁️", name: "Vision", items: ["Follows a moving face or toy 180° (side to side)", "Watches your face intently during conversation"] },
-        { icon: "💬", name: "Language", items: ["Coos and makes vowel sounds (\"ooh\", \"aah\")", "Different cries for hunger vs discomfort"] },
-        { icon: "❤️", name: "Social", items: ["Social smile — smiles back when you smile at them", "Recognizes and calms to familiar caregivers"] },
-      ],
-      redflag: "🚨 See your doctor if: not smiling socially by 2 months, not making any sounds, not tracking faces with eyes",
-      help: ["Smile and talk to your baby constantly — the social smile is your feedback that it's working", "Respond to every coo and sound — this teaches turn-taking, the foundation of conversation", "Continue tummy time daily — increase gradually to 10–15 minutes total per day"]
-    },
-    {
-      age: "4 Months",
-      color: "#3A7ABD",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Holds head steady when sitting supported", "Pushes up on forearms during tummy time", "Rolls from tummy to back"] },
-        { icon: "✋", name: "Fine Motor", items: ["Brings hands together at midline", "Reaches for and bats at dangling toys", "Brings hands to mouth"] },
-        { icon: "💬", name: "Language", items: ["Babbles — chains of sounds (\"ba-ba\", \"da-da\" — not meaningful yet)", "Laughs out loud", "Responds to your voice by turning toward you"] },
-        { icon: "❤️", name: "Social", items: ["Recognizes you and shows excitement", "Enjoys play and may cry when play stops", "Mimics facial expressions"] },
-      ],
-      redflag: "🚨 See your doctor if: not laughing or making sounds, not reaching for objects, not holding head steady",
-      help: ["Read board books — even at 4 months, hearing words and seeing pictures builds language", "Offer safe toys to hold and explore — varied textures, colors, sounds", "Mirror play — babies love looking at faces, including their own reflection"]
-    },
-    {
-      age: "6 Months",
-      color: "#3A7ABD",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Rolls both ways (tummy to back AND back to tummy)", "Sits briefly with hands propped forward for support", "Bears weight on legs when held standing"] },
-        { icon: "✋", name: "Fine Motor", items: ["Transfers objects from hand to hand", "Rakes small objects with fingers", "Holds own bottle or food"] },
-        { icon: "💬", name: "Language", items: ["Babbles with consonants: \"ba\", \"ma\", \"da\", \"ga\"", "Responds to their own name", "Vocalizes pleasure and displeasure with different sounds"] },
-        { icon: "❤️", name: "Social", items: ["Recognizes familiar vs unfamiliar faces", "Enjoys social games like peek-a-boo", "Shows affection — reaches to be held by caregivers"] },
-      ],
-      redflag: "🚨 See your doctor if: not responding to name, no babbling with consonants, not sitting with support, not reaching for objects",
-      help: ["Narrate your day — \"Now we're washing your hands, the water is warm...\" — this builds vocabulary", "Introduce simple games: peek-a-boo, pat-a-cake", "Start complementary feeding — new tastes and textures are sensory learning too"]
-    },
-    {
-      age: "9 Months",
-      color: "#2A6099",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Sits independently without support", "Gets into crawling position, may crawl or creep", "Pulls to standing while holding furniture"] },
-        { icon: "✋", name: "Fine Motor", items: ["Pincer grasp developing — picks up small objects with thumb and index finger", "Bangs objects together", "Points at objects of interest"] },
-        { icon: "💬", name: "Language", items: ["Babbles longer strings of syllables (\"mamama\", \"dadada\")", "Understands \"no\"", "Waves bye-bye", "Looks when you point at something"] },
-        { icon: "❤️", name: "Social", items: ["Stranger anxiety peaks — clings to parents", "Separation anxiety begins", "Imitates gestures and actions"] },
-      ],
-      redflag: "🚨 See your doctor if: not sitting without support, no babbling, not responding to name consistently, no gestures (pointing, waving)",
-      help: ["Child-proof the floor — crawling babies explore everything", "Read together daily — point to pictures and name them", "Play imitation games — clap, wave, shake head — your baby will follow"]
-    },
-    {
-      age: "12 Months",
-      color: "#1B5C3A",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Pulls to stand and cruises along furniture", "May take first independent steps (range: 9–15 months)", "Climbs up stairs on hands and knees"] },
-        { icon: "✋", name: "Fine Motor", items: ["Good pincer grasp — picks up small pieces of food", "Releases objects intentionally (drops, throws)", "Puts objects into containers"] },
-        { icon: "💬", name: "Language", items: ["1–3 meaningful words beyond \"mama\" and \"dada\"", "Understands simple commands (\"Give me...\", \"Come here\")", "Points to show you things or request"] },
-        { icon: "❤️", name: "Social", items: ["Shows objects to share interest with you", "Plays simple gesture games", "Shows affection openly — hugs, kisses"] },
-      ],
-      redflag: "🚨 See your doctor if: no words at all by 12 months, no pointing or waving, not pulling to stand, loss of any skill previously achieved",
-      help: ["Name everything around you — your baby is absorbing vocabulary every waking moment", "Let them feed themselves finger foods — messy but important for independence", "Don't rush walking — standing and cruising is healthy preparation. Avoid walkers (they delay walking and cause falls)"]
-    },
-  ].map(a => `
-  <div class="ho-section">
-    <div style="background:#2A6099;border-radius:10px 10px 0 0;padding:10px 16px;margin-bottom:0">
-      <div style="font-size:16px;font-weight:700;color:white">${a.age}</div>
-    </div>
-    <div style="border:1.5px solid #B8D4F0;border-top:none;border-radius:0 0 10px 10px;overflow:hidden;margin-bottom:4px">
-      ${a.domains.map((d,i) => `
-      <div style="padding:11px 14px;background:${i%2===0?'white':'#F5F9FF'};${i<a.domains.length-1?'border-bottom:1px solid #DCE8F5':''}">
-        <div style="font-size:12px;font-weight:600;color:#2A6099;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px">${d.icon} ${d.name}</div>
-        ${d.items.map(item => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 10px;line-height:1.5;border-left:2px solid #B8D4F0;margin-bottom:3px">${item}</div>`).join('')}
-      </div>`).join('')}
-    </div>
-    ${a.redflag ? `
-    <div style="background:#FDF0EB;border:1.5px solid #F0C4A8;border-radius:8px;padding:11px 14px;margin-bottom:4px;font-size:13px;color:#4A5752;line-height:1.5">${a.redflag}</div>` : ''}
-    <div style="background:#EEF7F2;border:1.5px solid #C8DDD0;border-radius:8px;padding:11px 14px;margin-bottom:16px">
-      <div style="font-size:12px;font-weight:600;color:#2E7D52;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">💚 How to help</div>
-      ${a.help.map(h => `<div style="font-size:13px;color:#4A5752;padding:3px 0 3px 10px;line-height:1.5;border-left:2px solid #2E7D52;margin-bottom:3px">${h}</div>`).join('')}
-    </div>
-  </div>`).join('')}
-
-  <!-- CRITICAL RED FLAGS SUMMARY -->
-  <div class="ho-section">
-    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🚨 Critical Red Flags — Always Bring to Your Doctor Immediately</div>
-    <p style="font-size:13.5px;color:#4A5752;margin-bottom:12px;line-height:1.65">These are signs that need prompt evaluation regardless of age:</p>
-    <div class="flag-list">
-      <div class="flag-item"><span class="flag-dot">⚠</span>No social smile by 2 months</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Not following objects with eyes or not making eye contact by 3 months</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Not babbling with consonant sounds by 6 months</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Not responding to their own name by 9 months</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>No pointing, waving, or other gestures by 12 months</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>No meaningful words at all by 12 months</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span><strong>Loss of any skill previously achieved</strong> — this is always urgent, at any age</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Your gut tells you something is different — trust your instinct as a parent</div>
-    </div>
-    <div class="ho-callout orange" style="margin-top:12px">
-      <strong>Early intervention matters enormously.</strong> The earlier a developmental concern is identified and addressed, the better the outcome. Never wait and see when it comes to developmental red flags — bring your child in and let your doctor assess.
-    </div>
-  </div>
-
-  <!-- SCREEN TIME NOTE -->
-  <div class="ho-section">
-    <div class="ho-section-title" style="color:#2A6099;border-color:#B8D4F0">📱 A Note on Screen Time</div>
-    <div class="ho-callout green" style="background:#F0F7FF;border-color:#2A6099">
-      The American Academy of Pediatrics recommends <strong>zero screen time for babies under 18–24 months</strong> (except video calls with family). Screens do not teach language or development in babies — only real human interaction does. A baby watching a screen is a baby not being talked to, sung to, or played with — which is what actually builds the brain.
-    </div>
-  </div>
-
-  <div class="ho-closing">
-    <div class="ho-quote" style="color:#2A6099">"You don't need expensive toys or classes. Talk to your baby, respond to them, play with them, read to them. That is the most powerful developmental intervention in the world."</div>
-    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
-    <div class="ho-disclaimer">Milestones are based on CDC, AAP, and WHO developmental guidelines. This handout is for educational purposes only. If you have any concerns about your child's development, please schedule a consultation — early evaluation is always the right choice.</div>
-  </div>
-</div>`,
-
-    tl: `
-<div class="ho">
-  <div class="ho-doc-header">
-    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
-    <div class="ho-title-sub">Pediatrician (Doktor ng mga Bata)</div>
-    <div class="ho-sched-grid">
-      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Linggo 11am–4pm · Martes 2pm–5pm<br>📞 0908 970 0299</div></div>
-      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Lun at Huw 8–11am · Mar at Sab 9am–12pm<br>📞 0976 436 5142</div></div>
-    </div>
-    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
-  </div>
-
-  <div class="ho-hero" style="background:#F0F7FF;border-color:#B8D4F0">
-    <div class="ho-hero-title" style="color:#2A6099">👶 Pag-unlad ng Baby: Kapanganakan hanggang 12 Buwan</div>
-    <div class="ho-hero-sub">Ano ang dapat gawin ng inyong baby — at paano ninyo matutulungan silang maabot ang kanilang buong potensyal</div>
-    <div class="ho-intro" style="border-color:#2A6099">
-      Ang bawat baby ay lumalaki sa sariling bilis — at may <strong>normal na range</strong> para sa bawat milestone. Ipinapakita ng handout na ito kung ano ang karaniwang nagagawa ng mga baby sa bawat edad, ang mga <strong>kritikal na red flags</strong> na palaging nangangailangan ng mabilis na evaluation, at mga simpleng aktibidad araw-araw na sumusuporta sa pag-unlad ng utak at katawan ng inyong baby. <strong>Kayo — ang magulang — ang pinaka-importanteng guro ng inyong baby.</strong>
-    </div>
-  </div>
-
-  <div class="ho-section">
-    <div class="ho-callout green" style="background:#F0F7FF;border-color:#2A6099">
-      📌 <strong style="color:#2A6099">Paano basahin ang handout na ito:</strong> Ang mga milestone na nakalista ay kung ano ang karaniwang nagagawa ng <em>karamihan</em> sa mga baby sa ganitong edad. Ang pagkawala ng isang milestone ay hindi palaging problema — ang pagkawala ng marami, o malaking pagkaantala, ang siyang dahilan para kumilos. Kung may duda, dalhin ang inyong baby para sa developmental check-up.
-    </div>
-  </div>
-
-  ${[
-    {
-      age: "Bagong Silang — 1 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Gumagalaw ang mga braso at binti kapag gising", "Inililingon ang ulo sa magkabilang panig kapag nakataob", "Malakas na grasp reflex kapag hinalikan ang palad"] },
-        { icon: "👁️", name: "Paningin at Atensyon", items: ["Nakatutok sa mga mukha na 20–30 cm ang layo", "Nagugulat sa malakas na ingay", "Tumatahimik sa pamilyar na boses — lalo na ng ina"] },
-        { icon: "💬", name: "Komunikasyon", items: ["Umiiyak para ipahayag ang gutom, kakulangan sa ginhawa, o pagod", "Gumagawa ng maliliit na tunog sa lalamunan"] },
-        { icon: "❤️", name: "Social", items: ["Mas gusto ang mga mukha ng tao kaysa mga bagay", "Maikling eye contact sa panahon ng pagpapasuso"] },
-      ],
-      redflag: null,
-      help: ["Kausapin ang inyong baby sa panahon ng pagpapakain, paliligo, at pagpapalit ng lampin — ang inyong boses ang pinaka-importanteng stimulus", "Skin-to-skin contact (kangaroo care) ay sumusuporta sa pag-unlad ng utak at bonding", "Tummy time ng ilang minuto kapag gising at may bantay — nagtatayo ito ng lakas ng leeg"]
-    },
-    {
-      age: "2 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Nagtatayo ng ulo nang maikli sa panahon ng tummy time", "Hindi na masyadong nakayuko — mas nakaladlad na ang mga braso at binti"] },
-        { icon: "👁️", name: "Paningin", items: ["Sinusundan ang gumagalaw na mukha o laruan ng 180°", "Pinagmamasdan nang matindi ang inyong mukha habang nakikipag-usap"] },
-        { icon: "💬", name: "Wika", items: ["Nagko-coo at gumagawa ng vowel sounds (\"ooh\", \"aah\")", "Iba-ibang iyak para sa gutom at kakulangan sa ginhawa"] },
-        { icon: "❤️", name: "Social", items: ["Social smile — ngumingiti pabalik kapag ngumiti kayo sa kanya", "Nakikilala at tumatahimik sa pamilyar na mga nagmamalasakit"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: hindi ngumingiti nang social sa 2 buwan, walang ginagawang tunog, hindi sinusundan ng mga mata ang mukha",
-      help: ["Ngumiti at makipag-usap palagi sa inyong baby — ang social smile ay ang feedback na gumagana ito", "Tumugon sa bawat coo at tunog — nagtuturo ito ng turn-taking, ang pundasyon ng pag-uusap", "Ipagpatuloy ang tummy time araw-araw — unti-unting dagdagan hanggang 10–15 minuto sa kabuuan bawat araw"]
-    },
-    {
-      age: "4 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Nanatiling matatag ang ulo kapag may suporta sa pag-upo", "Nagtutulak pataas sa mga siko sa panahon ng tummy time", "Gumugulong mula sa tiyan patungo sa likod"] },
-        { icon: "✋", name: "Fine Motor", items: ["Dina-dikit ang mga kamay sa gitna", "Umaabot at humahampas ng mga nakabitin na laruan", "Dinadala ang mga kamay sa bibig"] },
-        { icon: "💬", name: "Wika", items: ["Nagba-babble — serye ng mga tunog (\"ba-ba\", \"da-da\" — hindi pa makahulugan)", "Tumatawa nang malakas", "Tumutugon sa inyong boses sa pamamagitan ng paglingon"] },
-        { icon: "❤️", name: "Social", items: ["Nakikilala kayo at nagpapakita ng excitement", "Nag-e-enjoy sa paglalaro at maaaring umiyak kapag natigil", "Ginagaya ang mga ekspresyon ng mukha"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: hindi tumatawa o gumagawa ng tunog, hindi umaabot para sa mga bagay, hindi nanatiling matatag ang ulo",
-      help: ["Magbasa ng board books — kahit sa 4 buwan, ang pakikinig ng mga salita ay nagtatayo ng wika", "Mag-alok ng ligtas na mga laruang hawakan at tuklasin — iba-ibang texture, kulay, tunog", "Mirror play — gusto ng mga baby ang mga mukha, kasama ang sarili nilang repleksyon"]
-    },
-    {
-      age: "6 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Gumugulong sa magkabilang direksyon (tiyan patungo sa likod AT likod patungo sa tiyan)", "Maikli na nakakaupo nang may mga kamay na nakasuporta sa harap", "Sumasakay sa bigat sa mga binti kapag hawak sa pagtayo"] },
-        { icon: "✋", name: "Fine Motor", items: ["Inililipat ang mga bagay mula sa isang kamay patungo sa isa pa", "Kinukuha ang maliliit na bagay gamit ang mga daliri", "Hawak ang sariling bote o pagkain"] },
-        { icon: "💬", name: "Wika", items: ["Nagba-babble na may mga katinig: \"ba\", \"ma\", \"da\", \"ga\"", "Tumutugon sa sariling pangalan", "Nagpapalit ng boses para ipahayag ang kasiyahan at hindi kasiyahan"] },
-        { icon: "❤️", name: "Social", items: ["Nakikilala ang pamilyar at hindi pamilyar na mga mukha", "Nag-e-enjoy ng mga social games tulad ng peek-a-boo", "Nagpapakita ng pagmamahal — umaabot para hawakan ng mga tagapag-alaga"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: hindi tumutugon sa pangalan, walang babbling na may consonants, hindi nakakaupo nang may suporta, hindi umaabot para sa mga bagay",
-      help: ["Ikwento ang inyong araw — \"Ngayon, hinuhugasan natin ang iyong mga kamay, mainit ang tubig...\" — nagtatayo ito ng vocabulary", "Magsimula ng simpleng mga laro: peek-a-boo, pat-a-cake", "Magsimula ng complementary feeding — mga bagong lasa at texture ay sensory learning din"]
-    },
-    {
-      age: "9 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Nakakaupo nang mag-isa nang walang suporta", "Pumupunta sa crawling position, maaaring gumapang", "Humihila sa pagtayo habang hawak ang furniture"] },
-        { icon: "✋", name: "Fine Motor", items: ["Nagde-develop ang pincer grasp — kumukuha ng maliliit na bagay gamit ang hinlalaki at hintuturo", "Binabangga ang mga bagay nang magkasama", "Nagtaturo sa mga bagay na interesado"] },
-        { icon: "💬", name: "Wika", items: ["Nagba-babble ng mas mahabang serye (\"mamama\", \"dadada\")", "Naiintindihan ang \"hindi\"", "Nagwe-wave ng paalam", "Tumingin kapag nagturo kayo ng isang bagay"] },
-        { icon: "❤️", name: "Social", items: ["Peak ng stranger anxiety — kumakapit sa mga magulang", "Nagsisimula ang separation anxiety", "Ginagaya ang mga kilos at aksyon"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: hindi nakakaupo nang walang suporta, walang babbling, hindi consistent na tumutugon sa pangalan, walang gestures (pagtuturo, pagwe-wave)",
-      help: ["Child-proof ang sahig — ang mga gumagapang na baby ay nag-explore ng lahat", "Magbasa nang magkasama araw-araw — ituro ang mga larawan at pangalanan ang mga ito", "Maglaro ng imitation games — palakpak, mag-wave, iling-iling — susundan ng inyong baby"]
-    },
-    {
-      age: "12 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Humihila para tumayo at nag-ccruise sa furniture", "Maaaring makapaglakad nang mag-isa (normal na range: 9–15 buwan)", "Umaakyat ng hagdan sa pamamagitan ng mga kamay at tuhod"] },
-        { icon: "✋", name: "Fine Motor", items: ["Maayos na pincer grasp — kumukuha ng maliliit na piraso ng pagkain", "Sinasadyang binabagsak ang mga bagay (binabagsak, itinatapon)", "Naglalagay ng mga bagay sa loob ng mga lalagyan"] },
-        { icon: "💬", name: "Wika", items: ["1–3 makahulugang salita bukod sa \"mama\" at \"dada\"", "Naiintindihan ang simpleng utos (\"Ibigay mo....\", \"Halika dito\")", "Nagtaturo para ipakita sa inyo ang mga bagay o humingi"] },
-        { icon: "❤️", name: "Social", items: ["Nagpapakita ng mga bagay para ibahagi ang interes sa inyo", "Naglalaro ng simpleng gesture games", "Nagpapakita ng pagmamahal nang bukas — nagyayakap, humahalak"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: walang salita sa 12 buwan, walang pagtuturo o pagwe-wave, hindi humihila para tumayo, nawala ang anumang skill na dati nang nagagawa",
-      help: ["Pangalanan ang lahat ng nakapaligid sa inyo — ang inyong baby ay sumisipsip ng vocabulary sa bawat oras ng pagkagising", "Hayaan silang mag-self-feed ng finger foods — magulo ngunit mahalaga para sa kalayaan", "Huwag magmadali sa paglalakad — ang pagtayo at cruising ay malusog na paghahanda. Iwasan ang walkers (nagpapabagal ng paglalakad at nagdudulot ng pagkahulog)"]
-    },
-  ].map(a => `
-  <div class="ho-section">
-    <div style="background:#2A6099;border-radius:10px 10px 0 0;padding:10px 16px">
-      <div style="font-size:16px;font-weight:700;color:white">${a.age}</div>
-    </div>
-    <div style="border:1.5px solid #B8D4F0;border-top:none;border-radius:0 0 10px 10px;overflow:hidden;margin-bottom:4px">
-      ${a.domains.map((d,i) => `
-      <div style="padding:11px 14px;background:${i%2===0?'white':'#F5F9FF'};${i<a.domains.length-1?'border-bottom:1px solid #DCE8F5':''}">
-        <div style="font-size:12px;font-weight:600;color:#2A6099;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px">${d.icon} ${d.name}</div>
-        ${d.items.map(item => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 10px;line-height:1.5;border-left:2px solid #B8D4F0;margin-bottom:3px">${item}</div>`).join('')}
-      </div>`).join('')}
-    </div>
-    ${a.redflag ? `<div style="background:#FDF0EB;border:1.5px solid #F0C4A8;border-radius:8px;padding:11px 14px;margin-bottom:4px;font-size:13px;color:#4A5752;line-height:1.5">${a.redflag}</div>` : ''}
-    <div style="background:#EEF7F2;border:1.5px solid #C8DDD0;border-radius:8px;padding:11px 14px;margin-bottom:16px">
-      <div style="font-size:12px;font-weight:600;color:#2E7D52;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">💚 Paano makakatulong</div>
-      ${a.help.map(h => `<div style="font-size:13px;color:#4A5752;padding:3px 0 3px 10px;line-height:1.5;border-left:2px solid #2E7D52;margin-bottom:3px">${h}</div>`).join('')}
-    </div>
-  </div>`).join('')}
-
-  <div class="ho-section">
-    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🚨 Kritikal na Red Flags — Dalhin Agad sa Doktor</div>
-    <div class="flag-list">
-      <div class="flag-item"><span class="flag-dot">⚠</span>Walang social smile sa 2 buwan</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Hindi sinusundan ng mga mata ang mga bagay o walang eye contact sa 3 buwan</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Walang babbling na may consonant sounds sa 6 buwan</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Hindi consistent na tumutugon sa sariling pangalan sa 9 buwan</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Walang pagtuturo, pagwe-wave, o iba pang gestures sa 12 buwan</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Walang makahulugang salita sa 12 buwan</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span><strong>Pagkawala ng anumang skill na dati nang nagagawa</strong> — laging urgent, sa anumang edad</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Ang inyong kutob bilang magulang na may kakaibang nangyayari — magtiwala sa inyong instinct</div>
-    </div>
-    <div class="ho-callout orange" style="margin-top:12px">
-      <strong>Ang maagang intervention ay napakahalaga.</strong> Mas maaga na matukoy at matugunan ang isang developmental concern, mas maganda ang kinalabasan. Huwag kailanman mag-wait and see pagdating sa developmental red flags — dalhin ang inyong anak at hayaan ang doktor na suriin.
-    </div>
-  </div>
-
-  <div class="ho-section">
-    <div class="ho-section-title" style="color:#2A6099;border-color:#B8D4F0">📱 Isang Tala Tungkol sa Screen Time</div>
-    <div class="ho-callout green" style="background:#F0F7FF;border-color:#2A6099">
-      Ang American Academy of Pediatrics ay nagrerekomenda ng <strong>zero screen time para sa mga baby na wala pang 18–24 buwan</strong> (maliban sa video calls sa pamilya). Ang mga screen ay hindi nagtuturo ng wika o pag-unlad sa mga baby — tanging tunay na pakikipag-ugnayan ng tao ang gumagawa nito. Ang baby na nanonood ng screen ay baby na hindi kinakausap, hinahagad, o nilalaro — na siyang tunay na nagtatayo ng utak.
-    </div>
-  </div>
-
-  <div class="ho-closing">
-    <div class="ho-quote" style="color:#2A6099">"Hindi kailangan ng mahal na mga laruan o klase. Kausapin ang inyong baby, tumugon sa kanila, maglaro sa kanila, magbasa sa kanila. Iyon ang pinaka-makapangyarihang developmental intervention sa mundo."</div>
-    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
-    <div class="ho-disclaimer">Ang mga milestone ay batay sa CDC, AAP, at WHO developmental guidelines. Ang handout na ito ay para sa educational purposes lamang. Kung mayroon kayong alalahanin tungkol sa pag-unlad ng inyong anak, mangyaring mag-schedule ng konsultasyon — ang maagang evaluation ay palaging tamang desisyon.</div>
-  </div>
-</div>`
-  }
-};
-
-// ── WELL CHILD: 1 TO 12 YEARS ─────────────────────────────────────────────
-HANDOUTS.devchild = {
-  title: {
-    en: "Child Development: 1 to 12 Years",
-    tl: "Pag-unlad ng Bata: 1 hanggang 12 Taon"
-  },
-  content: {
-    en: `
-<div class="ho">
-  <div class="ho-doc-header">
-    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
-    <div class="ho-title-sub">Pediatrician</div>
-    <div class="ho-sched-grid">
-      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Sun 11am–4pm · Tue 2pm–5pm<br>📞 0908 970 0299</div></div>
-      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Mon &amp; Thu 8–11am · Tue &amp; Sat 9am–12pm<br>📞 0976 436 5142</div></div>
-    </div>
-    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
-  </div>
-
-  <div class="ho-hero" style="background:#F0F7FF;border-color:#B8D4F0">
-    <div class="ho-hero-title" style="color:#2A6099">🧒 Child Development: 1 to 12 Years</div>
-    <div class="ho-hero-sub">Milestones from first steps to school age — what to expect, red flags, and how to support your child every step of the way</div>
-    <div class="ho-intro" style="border-color:#2A6099">
-      Development doesn't stop after infancy. Language, thinking, social skills, and emotional regulation continue to grow rapidly through childhood. <strong>Your involvement, conversation, and presence remain the single most powerful influence on your child's development</strong> — at every age in this handout.
-    </div>
-  </div>
-
-  <div class="ho-section">
-    <div class="ho-callout green" style="background:#F0F7FF;border-color:#2A6099">
-      📌 <strong style="color:#2A6099">Remember:</strong> Development is a range, not a deadline. What matters is steady progress over time. Missing one milestone is not alarming — regression (losing skills), no progress, or significantly lagging behind in multiple areas always needs evaluation.
-    </div>
-  </div>
-
-  ${[
-    {
-      age: "15 Months",
-      color: "#2A6099",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Walks independently — wide-based gait is normal", "Stoops to pick up objects and returns to standing", "Climbs onto low furniture"] },
-        { icon: "✋", name: "Fine Motor", items: ["Turns pages of board books (a few at a time)", "Stacks 2 blocks", "Scribbles with crayon when placed in hand"] },
-        { icon: "💬", name: "Language", items: ["4–6 meaningful words", "Follows simple 1-step instructions (\"Sit down\", \"Come here\")", "Points to communicate wants — reaching, showing"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Strong separation anxiety is normal", "Parallel play — plays alongside other children, not yet with them", "Hugs and shows affection to familiar people"] },
-      ],
-      redflag: "🚨 See your doctor if: not walking by 15 months, fewer than 3 words, not pointing to request or show",
-      help: ["Read together every day — name pictures, ask simple questions", "Give simple choices: \"Do you want water or milk?\" — builds language and autonomy", "Don't rush out of parallel play — it's completely normal at this age"]
-    },
-    {
-      age: "18 Months",
-      color: "#2A6099",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Walks well with few falls", "Runs — though still clumsy", "Walks up stairs holding rail or hand"] },
-        { icon: "✋", name: "Fine Motor", items: ["Stacks 3–4 blocks", "Uses spoon (messy but intentional)", "Turns single pages of books"] },
-        { icon: "💬", name: "Language", items: ["At least 10–15 words", "Points to body parts when asked", "Follows 2-step related instructions (\"Get your shoes and bring them here\")"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Imitates household activities — sweeping, cooking", "Shows empathy — may pat or hug someone who is crying", "Tantrums beginning — normal, not manipulation"] },
-      ],
-      redflag: "🚨 See your doctor if: fewer than 10 words at 18 months, not pointing, no pretend play (feeding a doll, talking on toy phone)",
-      help: ["Narrate everything you do together — language at this age grows fastest through real conversation", "Respond to tantrums with calm — not punishment. Name the emotion: \"I know you're angry\"", "Simple pretend play: pretend to cook, clean, feed a stuffed animal together"]
-    },
-    {
-      age: "2 Years",
-      color: "#3A7ABD",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Runs well", "Kicks a ball forward", "Walks up AND down stairs holding rail"] },
-        { icon: "✋", name: "Fine Motor", items: ["Stacks 6+ blocks", "Holds crayon with fingers (not fist)", "Turns doorknobs and unscrews lids"] },
-        { icon: "💬", name: "Language", items: ["At least 50 words", "Combines 2 words meaningfully (\"More milk\", \"Daddy go\", \"Big dog\")", "Strangers should understand about 50% of speech"] },
-        { icon: "🧠", name: "Cognitive", items: ["Sorts objects by shape and color", "Completes 3–4 piece puzzles", "Understands concept of \"mine\" and \"yours\""] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Parallel play transitioning to associative play", "Increasingly independent — \"Me do it!\"", "Magical thinking beginning — stuffed animals are real to them"] },
-      ],
-      redflag: "🚨 See your doctor if: fewer than 50 words, not combining 2-word phrases, not following 2-step instructions, loss of previously learned skills",
-      help: ["Expand on what they say: they say \"Dog\" — you say \"Yes! A big brown dog running fast!\"", "Let them help with simple tasks — pouring water, sorting laundry. Independence builds confidence", "Limit screens. What they need most at this age is unstructured play and conversation"]
-    },
-    {
-      age: "3 Years",
-      color: "#3A7ABD",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Rides tricycle", "Jumps with both feet leaving the ground", "Climbs well"] },
-        { icon: "✋", name: "Fine Motor", items: ["Draws a circle (copies)", "Uses scissors (first attempts)", "Buttons large buttons"] },
-        { icon: "💬", name: "Language", items: ["3-word sentences minimum, usually longer", "Strangers understand 75% of speech", "Asks \"why?\" constantly — answer every question", "Knows first and last name, age, and gender"] },
-        { icon: "🧠", name: "Cognitive", items: ["Understands past and future (\"yesterday\", \"tomorrow\")", "Counts to 3 objects", "Matches and names colors"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Plays with other children — associative play", "Takes turns with prompting", "Rich imaginative play — stories, characters, pretend worlds"] },
-      ],
-      redflag: "🚨 See your doctor if: speech mostly unclear to family, no sentences, not playing with other children, extreme difficulty separating from parents",
-      help: ["Answer every \"why\" — curiosity is the engine of learning", "Arrange playdates — social skills are learned through practice", "Read stories with feelings in them and talk about the characters' emotions"]
-    },
-    {
-      age: "4–5 Years",
-      color: "#1B5C3A",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Hops on one foot, skips", "Throws and catches a ball", "Dresses and undresses with minimal help"] },
-        { icon: "✋", name: "Fine Motor", items: ["Draws a person with 3+ body parts", "Copies letters and simple shapes", "Uses fork and spoon correctly"] },
-        { icon: "💬", name: "Language", items: ["Long complex sentences — tells stories with beginning, middle, end", "Strangers understand nearly all speech", "Knows letters, numbers 1–10, basic colors and shapes", "Can give their full name and address"] },
-        { icon: "🧠", name: "Cognitive", items: ["Understands rules of games", "Begins reading simple words (by 5)", "Can focus on a task for 5–10 minutes"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Cooperative play — negotiates, takes turns without prompting", "Has preferred friends", "Understands the difference between real and pretend"] },
-      ],
-      redflag: "🚨 See your doctor if: speech not understood by strangers, no pretend play, difficulty with peers, extreme separation anxiety, can't follow 3-step instructions",
-      help: ["Play board games together — teaches turn-taking, rule-following, losing gracefully", "Encourage drawing and craft — fine motor skills link directly to writing readiness", "This is a prime window for reading readiness — daily reading together is the best preparation for school"]
-    },
-    {
-      age: "6–8 Years",
-      color: "#2A6099",
-      domains: [
-        { icon: "💪", name: "Physical", items: ["Rides bicycle without training wheels", "More coordinated sports and physical activities", "Permanent teeth beginning to appear"] },
-        { icon: "✋", name: "Fine Motor", items: ["Writes legibly", "Ties shoelaces", "Detailed drawings with background and multiple figures"] },
-        { icon: "💬", name: "Language/Academic", items: ["Reading — progressing from sounding out to fluent reading", "Simple addition and subtraction", "Can tell time and understand calendar concepts"] },
-        { icon: "🧠", name: "Cognitive", items: ["Logical thinking — understands cause and effect", "Can plan and carry out multi-step tasks", "Begins understanding other people's perspectives"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Peer relationships become central", "Gender-segregated friendships common", "Developing sense of fairness — \"It's not fair!\" is frequent", "Beginning to internalize values"] },
-      ],
-      redflag: "🚨 See your doctor if: significant reading or writing difficulty by age 7–8, unable to follow classroom instructions, social isolation, extreme anxiety or mood changes",
-      help: ["Read together still — even when they can read alone, being read to builds vocabulary", "Chores with responsibility — allowance, household duties — builds work ethic", "Know their friends and friends' parents. Social environment matters enormously now"]
-    },
-    {
-      age: "9–12 Years",
-      color: "#1B5C3A",
-      domains: [
-        { icon: "💪", name: "Physical", items: ["Puberty changes beginning (girls: 9–10, boys: 11–12 on average)", "Rapid growth spurts", "More interest in sports, physical activity, or specific hobbies"] },
-        { icon: "✋", name: "Academic", items: ["Abstract thinking developing — can reason about hypotheticals", "Multi-subject academic demands increase", "Study skills and time management becoming important"] },
-        { icon: "💬", name: "Language/Communication", items: ["Rich vocabulary, complex sentence structure", "Beginning to debate, argue a point of view", "Understands sarcasm, jokes, and figurative language"] },
-        { icon: "🧠", name: "Cognitive", items: ["Can think about their own thinking (metacognition)", "Beginning of abstract and moral reasoning", "Sets goals and plans ahead"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Peer influence at its strongest — choose friends carefully", "Identity formation beginning", "More privacy needed — normal and healthy", "May push back against parental authority — normal developmental step"] },
-      ],
-      redflag: "🚨 See your doctor if: sudden academic decline, social withdrawal, persistent sadness or anxiety, significant behavioral changes, disordered eating, or any talk of self-harm",
-      help: ["Stay connected — even when they pull away, your presence matters more than ever", "Discuss puberty openly and calmly before changes happen — not after", "Monitor screen time and online activity — this age group is the most vulnerable to online harms", "Eat dinner together as much as possible — the family table is proven to be protective"]
-    },
-  ].map(a => `
-  <div class="ho-section">
-    <div style="background:#2A6099;border-radius:10px 10px 0 0;padding:10px 16px">
-      <div style="font-size:16px;font-weight:700;color:white">${a.age}</div>
-    </div>
-    <div style="border:1.5px solid #B8D4F0;border-top:none;border-radius:0 0 10px 10px;overflow:hidden;margin-bottom:4px">
-      ${a.domains.map((d,i) => `
-      <div style="padding:11px 14px;background:${i%2===0?'white':'#F5F9FF'};${i<a.domains.length-1?'border-bottom:1px solid #DCE8F5':''}">
-        <div style="font-size:12px;font-weight:600;color:#2A6099;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px">${d.icon} ${d.name}</div>
-        ${d.items.map(item => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 10px;line-height:1.5;border-left:2px solid #B8D4F0;margin-bottom:3px">${item}</div>`).join('')}
-      </div>`).join('')}
-    </div>
-    <div style="background:#FDF0EB;border:1.5px solid #F0C4A8;border-radius:8px;padding:11px 14px;margin-bottom:4px;font-size:13px;color:#4A5752;line-height:1.5">${a.redflag}</div>
-    <div style="background:#EEF7F2;border:1.5px solid #C8DDD0;border-radius:8px;padding:11px 14px;margin-bottom:16px">
-      <div style="font-size:12px;font-weight:600;color:#2E7D52;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">💚 How to help</div>
-      ${a.help.map(h => `<div style="font-size:13px;color:#4A5752;padding:3px 0 3px 10px;line-height:1.5;border-left:2px solid #2E7D52;margin-bottom:3px">${h}</div>`).join('')}
-    </div>
-  </div>`).join('')}
-
-  <div class="ho-section">
-    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🚨 Red Flags at Any Age — Always See Your Doctor</div>
-    <div class="flag-list">
-      <div class="flag-item"><span class="flag-dot">⚠</span>Loss of any skill previously mastered — at any age, this is always urgent</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Speech not understood by strangers by age 3</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>No sentences by age 2, no complex sentences by age 3</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Significant reading or writing difficulty by age 7–8 despite schooling</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Social isolation, no friendships, or being consistently rejected by peers</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Persistent sadness, anxiety, or behavioral changes lasting more than 2 weeks</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Any talk of self-harm, hopelessness, or not wanting to be alive</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Extreme hyperactivity or inability to focus that affects school and relationships</div>
-    </div>
-  </div>
-
-  <div class="ho-closing">
-    <div class="ho-quote" style="color:#2A6099">"Children don't need perfect parents. They need present ones. Show up, stay curious about who they are becoming, and the rest follows."</div>
-    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
-    <div class="ho-disclaimer">Milestones are based on CDC, AAP, and WHO developmental guidelines. This handout is for educational purposes only. If you have any concerns about your child's development, please schedule a consultation — early evaluation is always the right choice.</div>
-  </div>
-</div>`,
-
-    tl: `
-<div class="ho">
-  <div class="ho-doc-header">
-    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
-    <div class="ho-title-sub">Pediatrician (Doktor ng mga Bata)</div>
-    <div class="ho-sched-grid">
-      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Linggo 11am–4pm · Martes 2pm–5pm<br>📞 0908 970 0299</div></div>
-      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Lun at Huw 8–11am · Mar at Sab 9am–12pm<br>📞 0976 436 5142</div></div>
-    </div>
-    <div class="ho-affil">Hospital Affiliations: Lucban MMG Hospital · Lucena MMG General Hospital · Tayabas Community Hospital, Inc. · Lucena United Doctors Hospital and Medical Center</div>
-  </div>
-
-  <div class="ho-hero" style="background:#F0F7FF;border-color:#B8D4F0">
-    <div class="ho-hero-title" style="color:#2A6099">🧒 Pag-unlad ng Bata: 1 hanggang 12 Taon</div>
-    <div class="ho-hero-sub">Mga milestone mula unang hakbang hanggang school age — ano ang inaasahan, red flags, at kung paano suportahan ang inyong anak sa bawat hakbang</div>
-    <div class="ho-intro" style="border-color:#2A6099">
-      Hindi titigil ang pag-unlad pagkatapos ng pagiging sanggol. Ang wika, pag-iisip, social skills, at emotional regulation ay patuloy na lumalaki nang mabilis sa buong pagkabata. <strong>Ang inyong pakikilahok, pag-uusap, at presensya ay nananatiling pinaka-makapangyarihang impluwensya sa pag-unlad ng inyong anak</strong> — sa bawat edad sa handout na ito.
-    </div>
-  </div>
-
-  <div class="ho-section">
-    <div class="ho-callout green" style="background:#F0F7FF;border-color:#2A6099">
-      📌 <strong style="color:#2A6099">Tandaan:</strong> Ang pag-unlad ay isang range, hindi isang deadline. Ang mahalaga ay tuloy-tuloy na pag-unlad sa paglipas ng panahon. Ang pagkawala ng isang milestone ay hindi nakakaalarma — ang regression (pagkawala ng skills), walang pag-unlad, o malaking pagkaatras sa maraming larangan ay palaging nangangailangan ng evaluation.
-    </div>
-  </div>
-
-  ${[
-    {
-      age: "15 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Naglalakad nang mag-isa — normal ang malawak na hakbang", "Yumuyuko para kumuha ng mga bagay at bumabalik sa pagtayo", "Umaakyat sa mababang furniture"] },
-        { icon: "✋", name: "Fine Motor", items: ["Binabaling ang mga pahina ng board books (ilang pahina nang sabay)", "Nag-i-stack ng 2 blocks", "Scribbles gamit ang crayon kapag inilagay sa kamay"] },
-        { icon: "💬", name: "Wika", items: ["4–6 makahulugang salita", "Sumusunod sa simpleng 1-step na utos (\"Umupo\", \"Halika dito\")", "Nagtaturo para ipahayag ang kagustuhan"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Normal ang matinding separation anxiety", "Parallel play — naglalaro sa tabi ng ibang bata, hindi pa kasama", "Nagyayakap at nagpapakita ng pagmamahal sa pamilyar na mga tao"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: hindi nakalakad sa 15 buwan, wala pang 3 salita, hindi nagtaturo para humingi o magpakita",
-      help: ["Magbasa nang magkasama araw-araw — pangalanan ang mga larawan, magtanong ng simpleng tanong", "Magbigay ng simpleng pagpipilian: \"Gusto mo ng tubig o gatas?\" — nagtatayo ng wika at kalayaan", "Huwag magmadali sa labas ng parallel play — ganap na normal sa ganitong edad"]
-    },
-    {
-      age: "18 Buwan",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Naglalakad nang maayos nang kaunting pagkahulog", "Tumatakbo — bagaman medyo awkward pa", "Umaakyat ng hagdan na hawak ang railing o kamay"] },
-        { icon: "✋", name: "Fine Motor", items: ["Nag-i-stack ng 3–4 blocks", "Gumagamit ng kutsara (magulo ngunit sadya)", "Nagbabalik-balik ng mga pahina ng libro"] },
-        { icon: "💬", name: "Wika", items: ["Hindi bababa sa 10–15 salita", "Nagtaturo sa mga parte ng katawan kapag tinanong", "Sumusunod sa 2-step na related na utos"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Ginagaya ang mga aktibidad sa bahay — pagsasapu, pagluluto", "Nagpapakita ng empatiya — maaaring haplusin o yakapin ang isang umiiyak", "Nagsisimulang mag-tantrum — normal, hindi manipulasyon"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: wala pang 10 salita sa 18 buwan, hindi nagtaturo, walang pretend play (nagpapakain ng manika, nakikipag-usap sa laruan)",
-      help: ["Ikwento ang lahat ng ginagawa ninyo nang magkasama — ang wika sa ganitong edad ay pinaka-mabilis na lumalaki sa pamamagitan ng tunay na pag-uusap", "Tumugon sa mga tantrum nang mahinahon — hindi parusa. Pangalanan ang emosyon: \"Alam kong galit ka\"", "Simpleng pretend play: magpanggap na nagluluto, naglilinis, nagpapakain ng stuffed animal nang magkasama"]
-    },
-    {
-      age: "2 Taon",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Tumatakbo nang maayos", "Tumutuntong ng bola pasulong", "Umaakyat AT bumababa ng hagdan na hawak ang railing"] },
-        { icon: "✋", name: "Fine Motor", items: ["Nag-i-stack ng 6+ blocks", "Humahawak ng crayon gamit ang mga daliri (hindi kamao)", "Iniiikot ang mga doorknob at nagtataas ng mga takip"] },
-        { icon: "💬", name: "Wika", items: ["Hindi bababa sa 50 salita", "Pinagsasama ang 2 salita nang makahulugan (\"Dagdag gatas\", \"Daddy alis\", \"Malaking aso\")", "Dapat maintindihan ng mga estranghero ang humigit-kumulang 50% ng pagsasalita"] },
-        { icon: "🧠", name: "Cognitive", items: ["Nag-i-sort ng mga bagay ayon sa hugis at kulay", "Kumukumpleto ng 3–4 piraso na puzzle", "Naiintindihan ang konsepto ng \"akin\" at \"iyo\""] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Parallel play na nagtutransisyon sa associative play", "Lalong nagiging independent — \"Ako lang!\"", "Nagsisimulang ang magical thinking — totoo ang mga stuffed animals sa kanila"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: wala pang 50 salita, hindi pinagsasama ang 2-word phrases, hindi sumusunod sa 2-step na utos, pagkawala ng mga dating natutunan",
-      help: ["Palawakin ang sinasabi nila: sinabi nilang \"Aso\" — sabihin ninyo \"Oo! Malaking kayumangging aso na mabilis na tumatakbo!\"", "Hayaang tumulong sa simpleng gawain — pagbubuhos ng tubig, pag-aayos ng labada. Nagtatayo ng kumpiyansa ang kalayaan", "Limitahan ang mga screen. Ang kailangan nila nang husto sa ganitong edad ay walang istrukturang paglalaro at pag-uusap"]
-    },
-    {
-      age: "3 Taon",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Nagbibisikleta ng trike", "Tumatalbog nang parehong paa na umaaangat sa sahig", "Umaakyat nang maayos"] },
-        { icon: "✋", name: "Fine Motor", items: ["Gumaguhit ng bilog (kinokopya)", "Gumagamit ng gunting (mga unang pagtatangka)", "Nagbubuklod ng malalaking pindutan"] },
-        { icon: "💬", name: "Wika", items: ["Minimum na 3-word sentences, karaniwang mas mahaba", "Nauunawaan ng mga estranghero ang 75% ng pagsasalita", "Paulit-ulit na nagtatanong ng \"bakit?\" — sagutin ang bawat tanong", "Alam ang unang at huling pangalan, edad, at kasarian"] },
-        { icon: "🧠", name: "Cognitive", items: ["Naiintindihan ang nakaraan at kinabukasan (\"kahapon\", \"bukas\")", "Nagbibilang ng 3 bagay", "Nagtatambal at nagpapalit ng pangalan ng mga kulay"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Naglalaro kasama ang ibang bata — associative play", "Nagpalipat-lipat nang may prompt", "Mayamang imaginative play — mga kwento, karakter, paimbabaw na mundo"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: karamihan sa pagsasalita ay hindi maintindihan ng pamilya, walang mga pangungusap, hindi naglalaro kasama ang ibang bata, matinding hirap na maghiwalay sa mga magulang",
-      help: ["Sagutin ang bawat \"bakit\" — ang pagkamausisa ang makina ng pagkatuto", "Mag-ayos ng mga playdate — ang social skills ay natutunan sa pamamagitan ng pagsasanay", "Magbasa ng mga kwento na may damdamin at pag-usapan ang emosyon ng mga karakter"]
-    },
-    {
-      age: "4–5 Taon",
-      domains: [
-        { icon: "💪", name: "Gross Motor", items: ["Lumundag sa isang paa, lumukso", "Nagmamato at humuhuli ng bola", "Nagbibihis at naghuhuband nang may kaunting tulong"] },
-        { icon: "✋", name: "Fine Motor", items: ["Gumaguhit ng tao na may 3+ parte ng katawan", "Kinokopya ang mga titik at simpleng hugis", "Gumagamit ng tinidor at kutsara nang tama"] },
-        { icon: "💬", name: "Wika", items: ["Mahabang kumplikadong pangungusap — nagkukwento na may simula, gitna, katapusan", "Halos lahat ng pagsasalita ay nauunawaan ng mga estranghero", "Alam ang mga titik, numero 1–10, mga pangunahing kulay at hugis", "Maibigay ang buong pangalan at address"] },
-        { icon: "🧠", name: "Cognitive", items: ["Naiintindihan ang mga patakaran ng mga laro", "Nagsisimulang magbasa ng simpleng salita (sa 5)", "Maaaring mag-focus sa isang gawain ng 5–10 minuto"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Cooperative play — nakikipag-negosasyon, nagpalipat-lipat nang walang prompt", "Mayroon nang mga paboritong kaibigan", "Naiintindihan ang pagkakaiba ng totoo at paimbabaw"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: hindi nauunawaan ng mga estranghero ang pagsasalita, walang pretend play, hirap sa mga kapwa, matinding separation anxiety, hindi sumusunod sa 3-step na utos",
-      help: ["Maglaro ng board games nang magkasama — nagtuturo ng turn-taking, pagsunod sa patakaran, matandang talo nang maayos", "Hikayatin ang pagguhit at craft — ang fine motor skills ay direktang konektado sa writing readiness", "Ito ang prime window para sa reading readiness — ang araw-araw na pagbabasa nang magkasama ang pinakamabuting paghahanda para sa paaralan"]
-    },
-    {
-      age: "6–8 Taon",
-      domains: [
-        { icon: "💪", name: "Physical", items: ["Nagbibisikleta nang walang training wheels", "Mas coordinate na sports at physical activities", "Nagsisimulang lumabas ang permanenteng ngipin"] },
-        { icon: "✋", name: "Fine Motor", items: ["Sumusulat nang malinaw", "Nagtatali ng sapatos", "Detalyadong mga guhit na may background at maraming pigura"] },
-        { icon: "💬", name: "Wika/Akademiko", items: ["Pagbabasa — mula sa pag-sound out patungo sa maayos na pagbabasa", "Simpleng karagdagan at pagbabawas", "Makabasa ng oras at maunawaan ang konsepto ng kalendaryo"] },
-        { icon: "🧠", name: "Cognitive", items: ["Logical thinking — naiintindihan ang sanhi at bunga", "Makaplano at magsagawa ng multi-step na gawain", "Nagsisimulang maunawaan ang perspektibo ng ibang tao"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Ang relasyon sa mga kapwa ay nagiging sentral", "Karaniwan ang peer groups na naka-segregate sa kasarian", "Nagde-develop ang pakiramdam ng pagkamakatuwiran — \"Hindi patas!\" ay madalas", "Nagsisimulang internalize ang mga values"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: malaking hirap sa pagbabasa o pagsulat sa edad 7–8, hindi makasunod sa mga utos sa klase, social isolation, matinding anxiety o pagbabago ng mood",
-      help: ["Magbasa pa rin nang magkasama — kahit kaya na nilang magbasa nang mag-isa, ang pagbabasa sa kanila ay nagtatayo ng vocabulary", "Mga responsibilidad sa bahay — nagtatayo ng work ethic", "Kilalanin ang kanilang mga kaibigan at mga magulang ng mga kaibigan. Napakahalaga ng social environment ngayon"]
-    },
-    {
-      age: "9–12 Taon",
-      domains: [
-        { icon: "💪", name: "Physical", items: ["Nagsisimulang magbago ang puberty (babae: 9–10, lalaki: 11–12 sa average)", "Mabilis na growth spurts", "Mas maraming interes sa sports, physical activity, o specific na hobbies"] },
-        { icon: "✋", name: "Akademiko", items: ["Nagde-develop ang abstract thinking — maaari nang mag-isip tungkol sa mga hypothetical", "Tumataas ang multi-subject na academic demands", "Nagiging mahalaga ang study skills at time management"] },
-        { icon: "💬", name: "Wika/Komunikasyon", items: ["Mayamang vocabulary, kumplikadong sentence structure", "Nagsisimulang makipagtalo, magargumento ng isang punto", "Naiintindihan ang sarcasm, jokes, at figurative language"] },
-        { icon: "🧠", name: "Cognitive", items: ["Makapag-isip tungkol sa sariling pag-iisip (metacognition)", "Nagsisimula ng abstract at moral reasoning", "Nagtatakda ng mga layunin at nagpaplano ng maaga"] },
-        { icon: "❤️", name: "Social/Emotional", items: ["Pinaka-malakas ang peer influence — maingat na pumili ng mga kaibigan", "Nagsisimula ang identity formation", "Kailangan ng mas maraming privacy — normal at malusog", "Maaaring lumaban sa awtoridad ng magulang — normal na developmental step"] },
-      ],
-      redflag: "🚨 Pumunta sa doktor kung: biglang pagbaba ng akademiko, social withdrawal, paulit-ulit na kalungkutan o anxiety, malaking pagbabago ng ugali, disordered eating, o anumang pag-usap ng self-harm",
-      help: ["Manatiling konektado — kahit lumayo sila, ang inyong presensya ay mas mahalaga kaysa kailanman", "Pag-usapan ang puberty nang bukas at mahinahon bago mangyari ang mga pagbabago — hindi pagkatapos", "Bantayan ang screen time at online activity — ang edad na ito ang pinakamarupok sa mga online na panganib", "Kumain nang magkasama sa hapunan hangga't maaari — napatunayang nagpoprotekta ang family table"]
-    },
-  ].map(a => `
-  <div class="ho-section">
-    <div style="background:#2A6099;border-radius:10px 10px 0 0;padding:10px 16px">
-      <div style="font-size:16px;font-weight:700;color:white">${a.age}</div>
-    </div>
-    <div style="border:1.5px solid #B8D4F0;border-top:none;border-radius:0 0 10px 10px;overflow:hidden;margin-bottom:4px">
-      ${a.domains.map((d,i) => `
-      <div style="padding:11px 14px;background:${i%2===0?'white':'#F5F9FF'};${i<a.domains.length-1?'border-bottom:1px solid #DCE8F5':''}">
-        <div style="font-size:12px;font-weight:600;color:#2A6099;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:5px">${d.icon} ${d.name}</div>
-        ${d.items.map(item => `<div style="font-size:13px;color:#4A5752;padding:2px 0 2px 10px;line-height:1.5;border-left:2px solid #B8D4F0;margin-bottom:3px">${item}</div>`).join('')}
-      </div>`).join('')}
-    </div>
-    <div style="background:#FDF0EB;border:1.5px solid #F0C4A8;border-radius:8px;padding:11px 14px;margin-bottom:4px;font-size:13px;color:#4A5752;line-height:1.5">${a.redflag}</div>
-    <div style="background:#EEF7F2;border:1.5px solid #C8DDD0;border-radius:8px;padding:11px 14px;margin-bottom:16px">
-      <div style="font-size:12px;font-weight:600;color:#2E7D52;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">💚 Paano makakatulong</div>
-      ${a.help.map(h => `<div style="font-size:13px;color:#4A5752;padding:3px 0 3px 10px;line-height:1.5;border-left:2px solid #2E7D52;margin-bottom:3px">${h}</div>`).join('')}
-    </div>
-  </div>`).join('')}
-
-  <div class="ho-section">
-    <div class="ho-section-title" style="color:#C85A38;border-color:#F0C4A8">🚨 Red Flags sa Anumang Edad — Palaging Kumita ng Doktor</div>
-    <div class="flag-list">
-      <div class="flag-item"><span class="flag-dot">⚠</span>Pagkawala ng anumang skill na dati nang natutunan — sa anumang edad, laging urgent ito</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Pagsasalita na hindi maintindihan ng mga estranghero sa edad 3</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Walang mga pangungusap sa edad 2, walang kumplikadong pangungusap sa edad 3</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Malaking hirap sa pagbabasa o pagsulat sa edad 7–8 kahit may pag-aaral</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Social isolation, walang mga kaibigan, o paulit-ulit na tinatanggihan ng mga kapwa</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Paulit-ulit na kalungkutan, anxiety, o pagbabago ng ugali na tumatagal ng higit sa 2 linggo</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Anumang pag-usap ng self-harm, kawalan ng pag-asa, o hindi gustong mabuhay</div>
-      <div class="flag-item"><span class="flag-dot">⚠</span>Matinding hyperactivity o kawalan ng kakayahang mag-focus na nakakaapekto sa paaralan at relasyon</div>
-    </div>
-  </div>
-
-  <div class="ho-closing">
-    <div class="ho-quote" style="color:#2A6099">"Hindi kailangan ng mga bata ang perpektong mga magulang. Kailangan nila ng mga naroroon. Sumipot, manatiling mausisa kung sino sila nagiging, at susunod ang iba."</div>
-    <div class="ho-attr">— Dr. Joris Manalo, Pediatrician</div>
-    <div class="ho-disclaimer">Ang mga milestone ay batay sa CDC, AAP, at WHO developmental guidelines. Ang handout na ito ay para sa educational purposes lamang. Kung mayroon kayong alalahanin tungkol sa pag-unlad ng inyong anak, mangyaring mag-schedule ng konsultasyon — ang maagang evaluation ay palaging tamang desisyon.</div>
-  </div>
-</div>`
-  }
-};
-
 // ── DEWORMING HANDOUT ─────────────────────────────────────────────────────
 HANDOUTS.deworm = {
   title: {
@@ -6548,6 +5911,156 @@ HANDOUTS.lead = {
   }
 };
 
+// ── MILESTONE CHECKLIST DATA ──────────────────────────────────────────────
+const MILESTONE_DATA = [
+  { id:"nb", label:"Newborn–1 month", minDays:0, maxDays:45,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Moves arms and legs equally on both sides","Lifts head briefly during tummy time"] },
+      { name:"Vision & Hearing", icon:"👁️", items:["Briefly focuses on your face up close","Startles or quiets to loud sounds"] },
+      { name:"Social", icon:"❤️", items:["Calms when held or spoken to in a familiar voice"] },
+    ]},
+  { id:"2mo", label:"2 months", minDays:46, maxDays:105,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Holds head up briefly during tummy time"] },
+      { name:"Vision", icon:"👁️", items:["Follows a face or toy with eyes side to side"] },
+      { name:"Language", icon:"💬", items:["Makes cooing sounds"] },
+      { name:"Social", icon:"❤️", items:["Smiles in response to your smile (social smile)"] },
+    ]},
+  { id:"4mo", label:"4 months", minDays:106, maxDays:165,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Holds head steady without support","Pushes up on arms during tummy time"] },
+      { name:"Fine Motor", icon:"✋", items:["Brings hands together","Reaches for toys"] },
+      { name:"Language", icon:"💬", items:["Babbles and laughs out loud"] },
+      { name:"Social", icon:"❤️", items:["Shows excitement when seeing a familiar caregiver"] },
+    ]},
+  { id:"6mo", label:"6 months", minDays:166, maxDays:255,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Rolls both ways","Sits briefly with hands propped forward"] },
+      { name:"Fine Motor", icon:"✋", items:["Transfers an object from one hand to the other"] },
+      { name:"Language", icon:"💬", items:["Babbles with consonant sounds (ba, ma, da)","Responds to own name"] },
+      { name:"Social", icon:"❤️", items:["Enjoys simple games like peek-a-boo"] },
+    ]},
+  { id:"9mo", label:"9 months", minDays:256, maxDays:345,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Sits without support","Pulls to stand holding furniture"] },
+      { name:"Fine Motor", icon:"✋", items:["Picks up small objects using thumb and finger (pincer grasp)"] },
+      { name:"Language", icon:"💬", items:["Babbles longer strings (mamama, dadada)","Looks when you point at something"] },
+      { name:"Social", icon:"❤️", items:["Shows stranger anxiety or clings to parent"] },
+    ]},
+  { id:"12mo", label:"12 months", minDays:346, maxDays:455,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Pulls to stand and cruises along furniture"] },
+      { name:"Fine Motor", icon:"✋", items:["Uses pincer grasp to pick up small food pieces"] },
+      { name:"Language", icon:"💬", items:["Says 1–3 words besides mama/dada","Points to request or show something"] },
+      { name:"Social", icon:"❤️", items:["Waves bye-bye","Shows affection (hugs, kisses)"] },
+    ]},
+  { id:"15mo", label:"15 months", minDays:456, maxDays:545,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Walks independently"] },
+      { name:"Fine Motor", icon:"✋", items:["Stacks 2 blocks","Scribbles when given a crayon"] },
+      { name:"Language", icon:"💬", items:["Says 4–6 meaningful words","Follows a simple 1-step instruction"] },
+      { name:"Social", icon:"❤️", items:["Points to communicate wants"] },
+    ]},
+  { id:"18mo", label:"18 months", minDays:546, maxDays:640,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Walks well, runs with some clumsiness"] },
+      { name:"Fine Motor", icon:"✋", items:["Stacks 3–4 blocks","Uses a spoon, even if messy"] },
+      { name:"Language", icon:"💬", items:["Says at least 10–15 words","Points to a body part when asked"] },
+      { name:"Social", icon:"❤️", items:["Imitates simple household activities"] },
+    ]},
+  { id:"2yr", label:"2 years", minDays:641, maxDays:1005,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Runs well, kicks a ball forward"] },
+      { name:"Fine Motor", icon:"✋", items:["Stacks 6 or more blocks"] },
+      { name:"Language", icon:"💬", items:["Says at least 50 words","Combines 2 words (\"more milk\")"] },
+      { name:"Social", icon:"❤️", items:["Plays alongside other children (parallel play)"] },
+    ]},
+  { id:"3yr", label:"3 years", minDays:1006, maxDays:1370,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Rides a tricycle","Jumps with both feet off the ground"] },
+      { name:"Fine Motor", icon:"✋", items:["Copies a circle when drawing"] },
+      { name:"Language", icon:"💬", items:["Speaks in 3-word sentences or more","Asks 'why' questions"] },
+      { name:"Social", icon:"❤️", items:["Plays with other children, takes turns with prompting"] },
+    ]},
+  { id:"4-5yr", label:"4–5 years", minDays:1371, maxDays:2190,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Hops on one foot","Throws and catches a ball"] },
+      { name:"Fine Motor", icon:"✋", items:["Draws a person with 3+ body parts","Uses scissors"] },
+      { name:"Language", icon:"💬", items:["Tells a simple story with a beginning and end","Speech is understood by strangers"] },
+      { name:"Social", icon:"❤️", items:["Cooperative play — negotiates and takes turns"] },
+    ]},
+  { id:"6-8yr", label:"6–8 years", minDays:2191, maxDays:3285,
+    domains:[
+      { name:"Gross Motor", icon:"💪", items:["Rides a bicycle without training wheels"] },
+      { name:"Fine Motor", icon:"✋", items:["Writes legibly","Ties shoelaces"] },
+      { name:"Language/Academic", icon:"💬", items:["Reading progresses from sounding out to fluent","Can tell time"] },
+      { name:"Social", icon:"❤️", items:["Has stable friendships","Understands rules of group games"] },
+    ]},
+  { id:"9-12yr", label:"9–12 years", minDays:3286, maxDays:4500,
+    domains:[
+      { name:"Physical", icon:"💪", items:["Beginning of puberty changes (varies widely by child)"] },
+      { name:"Academic", icon:"📚", items:["Can reason about hypothetical situations","Manages multi-step school tasks"] },
+      { name:"Language", icon:"💬", items:["Understands sarcasm and figurative language","Can debate or argue a point of view"] },
+      { name:"Social/Emotional", icon:"❤️", items:["Peer relationships are a strong influence","Wants more privacy and independence"] },
+    ]},
+];
+
+
+// ── MILESTONE CHECKLIST — INTERACTIVE TOOL ────────────────────────────────
+HANDOUTS.milestonecheck = {
+  title: { en: "Developmental Milestone Checklist" },
+  content: {
+    en: `<div class="ho">
+  <div class="ho-doc-header">
+    <h2>Maria Joriselle O. Manalo, MD, DPPS</h2>
+    <div class="ho-title-sub">Pediatrician</div>
+    <div class="ho-sched-grid">
+      <div class="ho-sched-cell"><div class="label">Lucban MMG Hospital</div><div class="val">Sun 11am–4pm · Tue 2pm–5pm<br>📞 0908 970 0299</div></div>
+      <div class="ho-sched-cell"><div class="label">RMT Clinical Laboratory</div><div class="val">Mon &amp; Thu 8–11am · Tue &amp; Sat 9am–12pm<br>📞 0976 436 5142</div></div>
+    </div>
+  </div>
+
+  <div class="ho-hero" style="background:#EDF5FF;border-color:#B8D4F0">
+    <div class="ho-hero-title" style="color:#2A6099">✅ Developmental Milestone Checklist</div>
+    <div class="ho-hero-sub">Enter your child's birthday to see milestones for their current age</div>
+  </div>
+
+  <div class="ho-callout green" style="background:#EDF5FF;border-color:#2A6099">
+    📸 <strong style="color:#2A6099">When you're done, take a screenshot of your results</strong> and bring it to your next well-child visit. We'll go over it together — this checklist is a conversation starter, not a diagnosis.
+  </div>
+
+  <div id="mc-input-section" style="margin-top:18px">
+    <div style="background:white;border:1.5px solid #B8D4F0;border-radius:10px;padding:18px 16px">
+      <label style="display:block;font-size:13px;font-weight:600;color:#2A6099;margin-bottom:8px">Child's birthday</label>
+      <input type="date" id="mc-birthday" style="width:100%;padding:11px 12px;border:1.5px solid #B8D4F0;border-radius:8px;font-size:15px;font-family:'DM Sans',sans-serif;color:#1E2B26;box-sizing:border-box">
+      <button onclick="mcCalculateAge()" style="margin-top:12px;width:100%;padding:12px;background:#2A6099;color:white;border:none;border-radius:8px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer">Show Milestones</button>
+    </div>
+  </div>
+
+  <div id="mc-age-select-section" style="display:none;margin-top:16px">
+    <div style="background:#F5F9FF;border:1.5px solid #B8D4F0;border-radius:10px;padding:14px 16px">
+      <div id="mc-age-display" style="font-size:13.5px;color:#4A5752;margin-bottom:10px"></div>
+      <label style="display:block;font-size:12px;font-weight:600;color:#2A6099;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">Age bracket to check (adjust if needed)</label>
+      <select id="mc-bracket-select" onchange="mcRenderChecklist()" style="width:100%;padding:10px 12px;border:1.5px solid #B8D4F0;border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;color:#1E2B26;background:white;box-sizing:border-box"></select>
+    </div>
+  </div>
+
+  <div id="mc-checklist-section" style="margin-top:16px"></div>
+
+  <div id="mc-result-section" style="display:none;margin-top:16px"></div>
+
+  <div class="ho-callout green" style="background:#EDF5FF;border-color:#2A6099;margin-top:20px">
+    📸 <strong style="color:#2A6099">Don't forget</strong> — screenshot this page when you're done and bring it to your next visit so we can discuss it together.
+  </div>
+
+  <div class="ho-closing">
+    <div class="ho-disclaimer">This checklist reflects common milestones most children reach by certain ages, based on CDC, AAP, and WHO developmental guidelines. Every child develops at their own pace. This tool does not diagnose any condition — it is meant to support a conversation with your pediatrician.</div>
+  </div>
+</div>`
+  }
+};
+
+
 // ── NAVIGATION ────────────────────────────────────────────────────────────
 let currentLang = 'en';
 let currentHandout = null;
@@ -6561,14 +6074,128 @@ function openHandout(id, lang, evt) {
 
   document.getElementById('topbarTitle').textContent = h.title[currentLang] || h.title['en'];
   const content = document.getElementById('handoutContent');
+  const tlContent = h.content.tl || h.content.en;
   content.innerHTML =
     `<div class="h-content-en${currentLang==='en'?' visible':''}">${h.content.en}</div>` +
-    `<div class="h-content-tl${currentLang==='tl'?' visible':''}">${h.content.tl}</div>`;
+    `<div class="h-content-tl${currentLang==='tl'?' visible':''}">${tlContent}</div>`;
+
+  const langToggle = document.getElementById('langToggle');
+  if (langToggle) langToggle.style.display = h.content.tl ? '' : 'none';
 
   updateLangToggle();
   document.getElementById('library-view').style.display = 'none';
   document.getElementById('handout-view').style.display = 'block';
   window.scrollTo(0, 0);
+
+  if (id === 'milestonecheck') {
+    setTimeout(mcInit, 50);
+  }
+}
+
+// ── MILESTONE CHECKLIST LOGIC ──────────────────────────────────────────────
+function mcInit() {
+  const bdayInput = document.getElementById('mc-birthday');
+  if (bdayInput) bdayInput.value = '';
+  const ageSection = document.getElementById('mc-age-select-section');
+  const checklistSection = document.getElementById('mc-checklist-section');
+  const resultSection = document.getElementById('mc-result-section');
+  if (ageSection) ageSection.style.display = 'none';
+  if (checklistSection) checklistSection.innerHTML = '';
+  if (resultSection) { resultSection.style.display = 'none'; resultSection.innerHTML = ''; }
+}
+
+function mcCalculateAge() {
+  const bdayVal = document.getElementById('mc-birthday').value;
+  if (!bdayVal) {
+    alert("Please enter your child's birthday first.");
+    return;
+  }
+  const bday = new Date(bdayVal + 'T00:00:00');
+  const today = new Date();
+  const diffDays = Math.floor((today - bday) / (1000 * 60 * 60 * 24));
+
+  if (diffDays < 0) {
+    alert('That birthday is in the future — please check the date.');
+    return;
+  }
+
+  const years = Math.floor(diffDays / 365.25);
+  const months = Math.floor((diffDays % 365.25) / 30.44);
+  let ageText = '';
+  if (years > 0) ageText = years + ' year' + (years > 1 ? 's' : '') + (months > 0 ? ', ' + months + ' month' + (months > 1 ? 's' : '') : '');
+  else ageText = months + ' month' + (months !== 1 ? 's' : '');
+
+  document.getElementById('mc-age-display').innerHTML = '<strong style="color:#2A6099">Current age: ' + ageText + '</strong>';
+
+  // Find the matching bracket
+  let matchIdx = MILESTONE_DATA.findIndex(b => diffDays >= b.minDays && diffDays <= b.maxDays);
+  if (matchIdx === -1) matchIdx = diffDays > MILESTONE_DATA[MILESTONE_DATA.length - 1].maxDays ? MILESTONE_DATA.length - 1 : 0;
+
+  // Populate bracket selector
+  const select = document.getElementById('mc-bracket-select');
+  select.innerHTML = MILESTONE_DATA.map((b, i) => `<option value="${i}"${i === matchIdx ? ' selected' : ''}>${b.label}</option>`).join('');
+
+  document.getElementById('mc-age-select-section').style.display = 'block';
+  mcRenderChecklist();
+}
+
+function mcRenderChecklist() {
+  const idx = parseInt(document.getElementById('mc-bracket-select').value, 10);
+  const bracket = MILESTONE_DATA[idx];
+  const container = document.getElementById('mc-checklist-section');
+  const resultSection = document.getElementById('mc-result-section');
+  resultSection.style.display = 'none';
+  resultSection.innerHTML = '';
+
+  let html = `<div style="background:white;border:1.5px solid #B8D4F0;border-radius:10px;overflow:hidden">`;
+  html += `<div style="background:#2A6099;padding:12px 16px"><div style="font-size:15px;font-weight:700;color:white">Milestones for ${bracket.label}</div></div>`;
+
+  bracket.domains.forEach((d, di) => {
+    html += `<div style="padding:12px 16px;${di < bracket.domains.length - 1 ? 'border-bottom:1px solid #DCE8F5' : ''}">`;
+    html += `<div style="font-size:12px;font-weight:600;color:#2A6099;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px">${d.icon} ${d.name}</div>`;
+    d.items.forEach((item, ii) => {
+      const checkId = `mc-check-${idx}-${di}-${ii}`;
+      html += `<label for="${checkId}" style="display:flex;align-items:flex-start;gap:10px;padding:7px 0;cursor:pointer;font-size:13.5px;color:#1E2B26;line-height:1.5">
+        <input type="checkbox" id="${checkId}" class="mc-checkbox" style="margin-top:2px;width:18px;height:18px;flex-shrink:0;accent-color:#2E7D52;cursor:pointer">
+        <span>${item}</span>
+      </label>`;
+    });
+    html += `</div>`;
+  });
+  html += `</div>`;
+
+  html += `<button onclick="mcShowResult(${idx})" style="margin-top:14px;width:100%;padding:12px;background:#2E7D52;color:white;border:none;border-radius:8px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer">I'm Done — Show Summary</button>`;
+
+  container.innerHTML = html;
+}
+
+function mcShowResult(idx) {
+  const bracket = MILESTONE_DATA[idx];
+  const checkboxes = document.querySelectorAll('.mc-checkbox');
+  let total = 0, checked = 0;
+  checkboxes.forEach(cb => { total++; if (cb.checked) checked++; });
+
+  const resultSection = document.getElementById('mc-result-section');
+  const unchecked = total - checked;
+
+  let html = '';
+  if (unchecked === 0) {
+    html = `<div style="background:#EEF7F2;border:1.5px solid #C8DDD0;border-radius:10px;padding:16px;text-align:center">
+      <div style="font-size:32px;margin-bottom:6px">✅</div>
+      <div style="font-size:14.5px;font-weight:600;color:#2E7D52;margin-bottom:4px">All ${total} milestones checked for ${bracket.label}</div>
+      <div style="font-size:13px;color:#4A5752;line-height:1.5">Great! Bring this to your next well-child visit so we can confirm together.</div>
+    </div>`;
+  } else {
+    html = `<div style="background:#FFFBF0;border:1.5px solid #E8D0A0;border-radius:10px;padding:16px;text-align:center">
+      <div style="font-size:32px;margin-bottom:6px">📋</div>
+      <div style="font-size:14.5px;font-weight:600;color:#B87A2A;margin-bottom:4px">${checked} of ${total} milestones checked for ${bracket.label}</div>
+      <div style="font-size:13px;color:#4A5752;line-height:1.5">${unchecked} item${unchecked > 1 ? 's were' : ' was'} not checked. This doesn't necessarily mean anything is wrong — every child develops differently. <strong>Take a screenshot of this page and bring it to your next visit</strong> so we can talk through it together.</div>
+    </div>`;
+  }
+
+  resultSection.innerHTML = html;
+  resultSection.style.display = 'block';
+  resultSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function switchLang(lang) {
